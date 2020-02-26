@@ -1,0 +1,11 @@
+#Internal package file, do not edit.
+#Tue Feb 25 16:21:23 CET 2020
+1.base=C\:\\Users\\Gabriele Alessandro\\Documents\\ShinyHunter\\app\\build\\intermediates\\merged_assets\\release\\mergeReleaseAssets\\out
+0.baseType=DIRECTORY
+1.baseType=DIRECTORY
+count=2
+1.set=ASSET
+0.path=classes.dex
+0.set=DEX
+0.base=C\:\\Users\\Gabriele Alessandro\\Documents\\ShinyHunter\\app\\build\\intermediates\\dex\\release\\mergeDexRelease\\out
+1.path=fonts/font_gothic.TTF

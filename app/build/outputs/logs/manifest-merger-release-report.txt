@@ -1,0 +1,269 @@
+-- Merging decision tree log ---
+manifest
+ADDED from C:\Users\Gabriele Alessandro\Documents\ShinyHunter\app\src\main\AndroidManifest.xml:2:1-23:12
+INJECTED from C:\Users\Gabriele Alessandro\Documents\ShinyHunter\app\src\main\AndroidManifest.xml:2:1-23:12
+INJECTED from C:\Users\Gabriele Alessandro\Documents\ShinyHunter\app\src\main\AndroidManifest.xml:2:1-23:12
+INJECTED from C:\Users\Gabriele Alessandro\Documents\ShinyHunter\app\src\main\AndroidManifest.xml:2:1-23:12
+MERGED from [com.google.android.material:material:1.0.0] C:\Users\Gabriele Alessandro\.gradle\caches\transforms-1\files-1.1\material-1.0.0.aar\d0c8289bcaa3a99d2e354f53175a037f\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.appcompat:appcompat:1.0.0] C:\Users\Gabriele Alessandro\.gradle\caches\transforms-1\files-1.1\appcompat-1.0.0.aar\9a06925faedcba99bc0b093da87cb59f\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.constraintlayout:constraintlayout:1.1.2] C:\Users\Gabriele Alessandro\.gradle\caches\transforms-1\files-1.1\constraintlayout-1.1.2.aar\ebb835a3bf04db00b9fc59bce29487e9\AndroidManifest.xml:2:1-11:12
+MERGED from [com.google.android.gms:play-services-ads:18.3.0] C:\Users\Gabriele Alessandro\.gradle\caches\transforms-1\files-1.1\jetified-play-services-ads-18.3.0.aar\c5ef5134c58b19800884f41bb48da495\AndroidManifest.xml:17:1-25:12
+MERGED from [com.daimajia.numberprogressbar:library:1.4] C:\Users\Gabriele Alessandro\.gradle\caches\transforms-1\files-1.1\library-1.4.aar\25d3df22df38cc8efb574dbddba0968b\AndroidManifest.xml:2:1-11:12
+MERGED from [com.google.android.gms:play-services-ads-identifier:17.0.0] C:\Users\Gabriele Alessandro\.gradle\caches\transforms-1\files-1.1\play-services-ads-identifier-17.0.0.aar\c3a7ee1b38abb3df2255c34ac3f459da\AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.gms:play-services-gass:18.3.0] C:\Users\Gabriele Alessandro\.gradle\caches\transforms-1\files-1.1\play-services-gass-18.3.0.aar\2cd84f02612d09ee4e5ffce8de1a93d9\AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-ads-lite:18.3.0] C:\Users\Gabriele Alessandro\.gradle\caches\transforms-1\files-1.1\play-services-ads-lite-18.3.0.aar\7f2a093917d4b7a6aafcea44b8c04dde\AndroidManifest.xml:17:1-42:12
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:17.1.0] C:\Users\Gabriele Alessandro\.gradle\caches\transforms-1\files-1.1\play-services-measurement-sdk-api-17.1.0.aar\39ccf50b8ff791c16fc5a2d0cbd65c6e\AndroidManifest.xml:17:1-27:12
+MERGED from [com.google.android.gms:play-services-tasks:17.0.0] C:\Users\Gabriele Alessandro\.gradle\caches\transforms-1\files-1.1\play-services-tasks-17.0.0.aar\0d9a9c2542a4b32481b0edb9cbbc156b\AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-measurement-base:17.1.0] C:\Users\Gabriele Alessandro\.gradle\caches\transforms-1\files-1.1\play-services-measurement-base-17.1.0.aar\5735deeeb77d5946be38be9b3b5a8ed1\AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-basement:17.0.0] C:\Users\Gabriele Alessandro\.gradle\caches\transforms-1\files-1.1\jetified-play-services-basement-17.0.0.aar\a3b0f777185124b4ec16bc7a2cb21402\AndroidManifest.xml:17:1-28:12
+MERGED from [androidx.fragment:fragment:1.0.0] C:\Users\Gabriele Alessandro\.gradle\caches\transforms-1\files-1.1\fragment-1.0.0.aar\fa75b17399a512dabdf135a3c657e2cd\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.0.0] C:\Users\Gabriele Alessandro\.gradle\caches\transforms-1\files-1.1\vectordrawable-animated-1.0.0.aar\c03cf986b00d7ec96aad50ec5df9bfa8\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.recyclerview:recyclerview:1.0.0] C:\Users\Gabriele Alessandro\.gradle\caches\transforms-1\files-1.1\recyclerview-1.0.0.aar\b227a32b174295ee25f2b5d130b48534\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.browser:browser:1.0.0] C:\Users\Gabriele Alessandro\.gradle\caches\transforms-1\files-1.1\browser-1.0.0.aar\d8c3248b6bb9fe47f2db951022925e3d\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\Gabriele Alessandro\.gradle\caches\transforms-1\files-1.1\legacy-support-core-ui-1.0.0.aar\498f06d2e69a70c4851c635d353669be\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\Gabriele Alessandro\.gradle\caches\transforms-1\files-1.1\legacy-support-core-utils-1.0.0.aar\de0b6dba2d1f7220b433188a215a8386\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.vectordrawable:vectordrawable:1.0.0] C:\Users\Gabriele Alessandro\.gradle\caches\transforms-1\files-1.1\vectordrawable-1.0.0.aar\5ab7826c142448491d86d1745ba4d07e\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.transition:transition:1.0.0] C:\Users\Gabriele Alessandro\.gradle\caches\transforms-1\files-1.1\transition-1.0.0.aar\58e91c5e36448fd28656c69a03e271bd\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\Gabriele Alessandro\.gradle\caches\transforms-1\files-1.1\loader-1.0.0.aar\1e6c5c467ac523a83ecc3834561b2a9b\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\Gabriele Alessandro\.gradle\caches\transforms-1\files-1.1\viewpager-1.0.0.aar\b9706a6a9e617710f8ee7e25ddfa775f\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] C:\Users\Gabriele Alessandro\.gradle\caches\transforms-1\files-1.1\coordinatorlayout-1.0.0.aar\e609e233ac11c331ad42ba4bb54329f5\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\Gabriele Alessandro\.gradle\caches\transforms-1\files-1.1\drawerlayout-1.0.0.aar\a133cbfde44a4e20a9d90b83b18c7e78\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] C:\Users\Gabriele Alessandro\.gradle\caches\transforms-1\files-1.1\slidingpanelayout-1.0.0.aar\1c85eb6a8132426ecfb1c4da3505ad57\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.customview:customview:1.0.0] C:\Users\Gabriele Alessandro\.gradle\caches\transforms-1\files-1.1\customview-1.0.0.aar\f5cb3f9018a14ae1ce202df667e63ffb\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] C:\Users\Gabriele Alessandro\.gradle\caches\transforms-1\files-1.1\swiperefreshlayout-1.0.0.aar\637079c5598eb15ca0628385fa585e2c\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] C:\Users\Gabriele Alessandro\.gradle\caches\transforms-1\files-1.1\asynclayoutinflater-1.0.0.aar\4275a31cfc28ecb49a8c411246bba9f3\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.core:core:1.0.0] C:\Users\Gabriele Alessandro\.gradle\caches\transforms-1\files-1.1\core-1.0.0.aar\1bb9c8013742b35a7b1383572b478042\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] C:\Users\Gabriele Alessandro\.gradle\caches\transforms-1\files-1.1\versionedparcelable-1.0.0.aar\4a8079ff7818b6d3a274a6666ab0bea4\AndroidManifest.xml:17:1-25:12
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\Gabriele Alessandro\.gradle\caches\transforms-1\files-1.1\cursoradapter-1.0.0.aar\f04ba73c1126be91851f2b8ab8024a65\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\Gabriele Alessandro\.gradle\caches\transforms-1\files-1.1\cardview-1.0.0.aar\70a7706f1b4eb8be9584d876d9657c1a\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.0.0] C:\Users\Gabriele Alessandro\.gradle\caches\transforms-1\files-1.1\lifecycle-runtime-2.0.0.aar\a4d9cc9b45eb1983914fca8343364c85\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\Gabriele Alessandro\.gradle\caches\transforms-1\files-1.1\documentfile-1.0.0.aar\5a0ee73ffe6a3c2f6b8f268aa023ac36\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\Gabriele Alessandro\.gradle\caches\transforms-1\files-1.1\localbroadcastmanager-1.0.0.aar\c3ef51192043faec42caccdc2e46416a\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.print:print:1.0.0] C:\Users\Gabriele Alessandro\.gradle\caches\transforms-1\files-1.1\print-1.0.0.aar\29aceaa4eb2d3f237037292c16026617\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.0.0] C:\Users\Gabriele Alessandro\.gradle\caches\transforms-1\files-1.1\lifecycle-viewmodel-2.0.0.aar\a9be202b08fc117dd72f071c8628dbb1\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\Gabriele Alessandro\.gradle\caches\transforms-1\files-1.1\interpolator-1.0.0.aar\c6f93eb3b7f1a9bf649523ee15c01b77\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\Gabriele Alessandro\.gradle\caches\transforms-1\files-1.1\lifecycle-livedata-2.0.0.aar\520f6daf598b184f23dd44a03b3ef00c\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\Gabriele Alessandro\.gradle\caches\transforms-1\files-1.1\lifecycle-livedata-core-2.0.0.aar\3b7f9aa9a7a7c5c5f31a65d65572791f\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\Gabriele Alessandro\.gradle\caches\transforms-1\files-1.1\core-runtime-2.0.0.aar\e25baeef11cfb5050444936af6ef1e94\AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.android.gms:play-services-ads-base:18.3.0] C:\Users\Gabriele Alessandro\.gradle\caches\transforms-1\files-1.1\play-services-ads-base-18.3.0.aar\c2ae65ff2b38afafebe38ad7b6d16285\AndroidManifest.xml:2:1-9:12
+INJECTED from C:\Users\Gabriele Alessandro\Documents\ShinyHunter\app\src\main\AndroidManifest.xml:2:1-23:12
+INJECTED from C:\Users\Gabriele Alessandro\Documents\ShinyHunter\app\src\main\AndroidManifest.xml:2:1-23:12
+INJECTED from C:\Users\Gabriele Alessandro\Documents\ShinyHunter\app\src\main\AndroidManifest.xml:2:1-23:12
+	package
+		ADDED from C:\Users\Gabriele Alessandro\Documents\ShinyHunter\app\src\main\AndroidManifest.xml:3:5-37
+		INJECTED from C:\Users\Gabriele Alessandro\Documents\ShinyHunter\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Gabriele Alessandro\Documents\ShinyHunter\app\src\main\AndroidManifest.xml
+	android:versionName
+		INJECTED from C:\Users\Gabriele Alessandro\Documents\ShinyHunter\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Gabriele Alessandro\Documents\ShinyHunter\app\src\main\AndroidManifest.xml:2:1-23:12
+		INJECTED from C:\Users\Gabriele Alessandro\Documents\ShinyHunter\app\src\main\AndroidManifest.xml
+	android:versionCode
+		INJECTED from C:\Users\Gabriele Alessandro\Documents\ShinyHunter\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Gabriele Alessandro\Documents\ShinyHunter\app\src\main\AndroidManifest.xml:2:1-23:12
+		INJECTED from C:\Users\Gabriele Alessandro\Documents\ShinyHunter\app\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from C:\Users\Gabriele Alessandro\Documents\ShinyHunter\app\src\main\AndroidManifest.xml:2:11-69
+application
+ADDED from C:\Users\Gabriele Alessandro\Documents\ShinyHunter\app\src\main\AndroidManifest.xml:5:5-22:19
+MERGED from [com.google.android.material:material:1.0.0] C:\Users\Gabriele Alessandro\.gradle\caches\transforms-1\files-1.1\material-1.0.0.aar\d0c8289bcaa3a99d2e354f53175a037f\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.material:material:1.0.0] C:\Users\Gabriele Alessandro\.gradle\caches\transforms-1\files-1.1\material-1.0.0.aar\d0c8289bcaa3a99d2e354f53175a037f\AndroidManifest.xml:22:5-20
+MERGED from [androidx.constraintlayout:constraintlayout:1.1.2] C:\Users\Gabriele Alessandro\.gradle\caches\transforms-1\files-1.1\constraintlayout-1.1.2.aar\ebb835a3bf04db00b9fc59bce29487e9\AndroidManifest.xml:9:5-20
+MERGED from [androidx.constraintlayout:constraintlayout:1.1.2] C:\Users\Gabriele Alessandro\.gradle\caches\transforms-1\files-1.1\constraintlayout-1.1.2.aar\ebb835a3bf04db00b9fc59bce29487e9\AndroidManifest.xml:9:5-20
+MERGED from [com.google.android.gms:play-services-ads-identifier:17.0.0] C:\Users\Gabriele Alessandro\.gradle\caches\transforms-1\files-1.1\play-services-ads-identifier-17.0.0.aar\c3a7ee1b38abb3df2255c34ac3f459da\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-ads-identifier:17.0.0] C:\Users\Gabriele Alessandro\.gradle\caches\transforms-1\files-1.1\play-services-ads-identifier-17.0.0.aar\c3a7ee1b38abb3df2255c34ac3f459da\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-gass:18.3.0] C:\Users\Gabriele Alessandro\.gradle\caches\transforms-1\files-1.1\play-services-gass-18.3.0.aar\2cd84f02612d09ee4e5ffce8de1a93d9\AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-gass:18.3.0] C:\Users\Gabriele Alessandro\.gradle\caches\transforms-1\files-1.1\play-services-gass-18.3.0.aar\2cd84f02612d09ee4e5ffce8de1a93d9\AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-ads-lite:18.3.0] C:\Users\Gabriele Alessandro\.gradle\caches\transforms-1\files-1.1\play-services-ads-lite-18.3.0.aar\7f2a093917d4b7a6aafcea44b8c04dde\AndroidManifest.xml:26:5-40:19
+MERGED from [com.google.android.gms:play-services-ads-lite:18.3.0] C:\Users\Gabriele Alessandro\.gradle\caches\transforms-1\files-1.1\play-services-ads-lite-18.3.0.aar\7f2a093917d4b7a6aafcea44b8c04dde\AndroidManifest.xml:26:5-40:19
+MERGED from [com.google.android.gms:play-services-tasks:17.0.0] C:\Users\Gabriele Alessandro\.gradle\caches\transforms-1\files-1.1\play-services-tasks-17.0.0.aar\0d9a9c2542a4b32481b0edb9cbbc156b\AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-tasks:17.0.0] C:\Users\Gabriele Alessandro\.gradle\caches\transforms-1\files-1.1\play-services-tasks-17.0.0.aar\0d9a9c2542a4b32481b0edb9cbbc156b\AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-measurement-base:17.1.0] C:\Users\Gabriele Alessandro\.gradle\caches\transforms-1\files-1.1\play-services-measurement-base-17.1.0.aar\5735deeeb77d5946be38be9b3b5a8ed1\AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-measurement-base:17.1.0] C:\Users\Gabriele Alessandro\.gradle\caches\transforms-1\files-1.1\play-services-measurement-base-17.1.0.aar\5735deeeb77d5946be38be9b3b5a8ed1\AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-basement:17.0.0] C:\Users\Gabriele Alessandro\.gradle\caches\transforms-1\files-1.1\jetified-play-services-basement-17.0.0.aar\a3b0f777185124b4ec16bc7a2cb21402\AndroidManifest.xml:22:5-26:19
+MERGED from [com.google.android.gms:play-services-basement:17.0.0] C:\Users\Gabriele Alessandro\.gradle\caches\transforms-1\files-1.1\jetified-play-services-basement-17.0.0.aar\a3b0f777185124b4ec16bc7a2cb21402\AndroidManifest.xml:22:5-26:19
+MERGED from [androidx.core:core:1.0.0] C:\Users\Gabriele Alessandro\.gradle\caches\transforms-1\files-1.1\core-1.0.0.aar\1bb9c8013742b35a7b1383572b478042\AndroidManifest.xml:22:5-89
+MERGED from [androidx.core:core:1.0.0] C:\Users\Gabriele Alessandro\.gradle\caches\transforms-1\files-1.1\core-1.0.0.aar\1bb9c8013742b35a7b1383572b478042\AndroidManifest.xml:22:5-89
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] C:\Users\Gabriele Alessandro\.gradle\caches\transforms-1\files-1.1\versionedparcelable-1.0.0.aar\4a8079ff7818b6d3a274a6666ab0bea4\AndroidManifest.xml:22:5-23:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] C:\Users\Gabriele Alessandro\.gradle\caches\transforms-1\files-1.1\versionedparcelable-1.0.0.aar\4a8079ff7818b6d3a274a6666ab0bea4\AndroidManifest.xml:22:5-23:19
+MERGED from [com.google.android.gms:play-services-ads-base:18.3.0] C:\Users\Gabriele Alessandro\.gradle\caches\transforms-1\files-1.1\play-services-ads-base-18.3.0.aar\c2ae65ff2b38afafebe38ad7b6d16285\AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-ads-base:18.3.0] C:\Users\Gabriele Alessandro\.gradle\caches\transforms-1\files-1.1\play-services-ads-base-18.3.0.aar\c2ae65ff2b38afafebe38ad7b6d16285\AndroidManifest.xml:7:5-20
+	android:screenOrientation
+		ADDED from C:\Users\Gabriele Alessandro\Documents\ShinyHunter\app\src\main\AndroidManifest.xml:6:9-45
+	android:appComponentFactory
+		ADDED from [androidx.core:core:1.0.0] C:\Users\Gabriele Alessandro\.gradle\caches\transforms-1\files-1.1\core-1.0.0.aar\1bb9c8013742b35a7b1383572b478042\AndroidManifest.xml:22:18-86
+	android:supportsRtl
+		ADDED from C:\Users\Gabriele Alessandro\Documents\ShinyHunter\app\src\main\AndroidManifest.xml:11:9-35
+	android:label
+		ADDED from C:\Users\Gabriele Alessandro\Documents\ShinyHunter\app\src\main\AndroidManifest.xml:9:9-41
+	android:roundIcon
+		ADDED from C:\Users\Gabriele Alessandro\Documents\ShinyHunter\app\src\main\AndroidManifest.xml:10:9-54
+	android:icon
+		ADDED from C:\Users\Gabriele Alessandro\Documents\ShinyHunter\app\src\main\AndroidManifest.xml:8:9-43
+	android:allowBackup
+		ADDED from C:\Users\Gabriele Alessandro\Documents\ShinyHunter\app\src\main\AndroidManifest.xml:7:9-35
+	android:theme
+		ADDED from C:\Users\Gabriele Alessandro\Documents\ShinyHunter\app\src\main\AndroidManifest.xml:12:9-40
+meta-data#com.google.android.gms.ads.APPLICATION_ID
+ADDED from C:\Users\Gabriele Alessandro\Documents\ShinyHunter\app\src\main\AndroidManifest.xml:13:9-15:73
+	android:value
+		ADDED from C:\Users\Gabriele Alessandro\Documents\ShinyHunter\app\src\main\AndroidManifest.xml:15:17-71
+	android:name
+		ADDED from C:\Users\Gabriele Alessandro\Documents\ShinyHunter\app\src\main\AndroidManifest.xml:14:17-73
+activity#com.trezza.shinyhunter.MainActivity
+ADDED from C:\Users\Gabriele Alessandro\Documents\ShinyHunter\app\src\main\AndroidManifest.xml:16:13-21:24
+	android:theme
+		ADDED from C:\Users\Gabriele Alessandro\Documents\ShinyHunter\app\src\main\AndroidManifest.xml:16:52-83
+	android:name
+		ADDED from C:\Users\Gabriele Alessandro\Documents\ShinyHunter\app\src\main\AndroidManifest.xml:16:23-51
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from C:\Users\Gabriele Alessandro\Documents\ShinyHunter\app\src\main\AndroidManifest.xml:17:17-20:33
+action#android.intent.action.MAIN
+ADDED from C:\Users\Gabriele Alessandro\Documents\ShinyHunter\app\src\main\AndroidManifest.xml:18:21-73
+	android:name
+		ADDED from C:\Users\Gabriele Alessandro\Documents\ShinyHunter\app\src\main\AndroidManifest.xml:18:29-70
+category#android.intent.category.LAUNCHER
+ADDED from C:\Users\Gabriele Alessandro\Documents\ShinyHunter\app\src\main\AndroidManifest.xml:19:21-81
+	android:name
+		ADDED from C:\Users\Gabriele Alessandro\Documents\ShinyHunter\app\src\main\AndroidManifest.xml:19:31-78
+uses-sdk
+INJECTED from C:\Users\Gabriele Alessandro\Documents\ShinyHunter\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from C:\Users\Gabriele Alessandro\Documents\ShinyHunter\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\Gabriele Alessandro\Documents\ShinyHunter\app\src\main\AndroidManifest.xml
+MERGED from [com.google.android.material:material:1.0.0] C:\Users\Gabriele Alessandro\.gradle\caches\transforms-1\files-1.1\material-1.0.0.aar\d0c8289bcaa3a99d2e354f53175a037f\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.material:material:1.0.0] C:\Users\Gabriele Alessandro\.gradle\caches\transforms-1\files-1.1\material-1.0.0.aar\d0c8289bcaa3a99d2e354f53175a037f\AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat:1.0.0] C:\Users\Gabriele Alessandro\.gradle\caches\transforms-1\files-1.1\appcompat-1.0.0.aar\9a06925faedcba99bc0b093da87cb59f\AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat:1.0.0] C:\Users\Gabriele Alessandro\.gradle\caches\transforms-1\files-1.1\appcompat-1.0.0.aar\9a06925faedcba99bc0b093da87cb59f\AndroidManifest.xml:20:5-44
+MERGED from [androidx.constraintlayout:constraintlayout:1.1.2] C:\Users\Gabriele Alessandro\.gradle\caches\transforms-1\files-1.1\constraintlayout-1.1.2.aar\ebb835a3bf04db00b9fc59bce29487e9\AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.constraintlayout:constraintlayout:1.1.2] C:\Users\Gabriele Alessandro\.gradle\caches\transforms-1\files-1.1\constraintlayout-1.1.2.aar\ebb835a3bf04db00b9fc59bce29487e9\AndroidManifest.xml:5:5-7:41
+MERGED from [com.google.android.gms:play-services-ads:18.3.0] C:\Users\Gabriele Alessandro\.gradle\caches\transforms-1\files-1.1\jetified-play-services-ads-18.3.0.aar\c5ef5134c58b19800884f41bb48da495\AndroidManifest.xml:21:5-23:52
+MERGED from [com.google.android.gms:play-services-ads:18.3.0] C:\Users\Gabriele Alessandro\.gradle\caches\transforms-1\files-1.1\jetified-play-services-ads-18.3.0.aar\c5ef5134c58b19800884f41bb48da495\AndroidManifest.xml:21:5-23:52
+MERGED from [com.daimajia.numberprogressbar:library:1.4] C:\Users\Gabriele Alessandro\.gradle\caches\transforms-1\files-1.1\library-1.4.aar\25d3df22df38cc8efb574dbddba0968b\AndroidManifest.xml:7:5-9:41
+MERGED from [com.daimajia.numberprogressbar:library:1.4] C:\Users\Gabriele Alessandro\.gradle\caches\transforms-1\files-1.1\library-1.4.aar\25d3df22df38cc8efb574dbddba0968b\AndroidManifest.xml:7:5-9:41
+MERGED from [com.google.android.gms:play-services-ads-identifier:17.0.0] C:\Users\Gabriele Alessandro\.gradle\caches\transforms-1\files-1.1\play-services-ads-identifier-17.0.0.aar\c3a7ee1b38abb3df2255c34ac3f459da\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-ads-identifier:17.0.0] C:\Users\Gabriele Alessandro\.gradle\caches\transforms-1\files-1.1\play-services-ads-identifier-17.0.0.aar\c3a7ee1b38abb3df2255c34ac3f459da\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-gass:18.3.0] C:\Users\Gabriele Alessandro\.gradle\caches\transforms-1\files-1.1\play-services-gass-18.3.0.aar\2cd84f02612d09ee4e5ffce8de1a93d9\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-gass:18.3.0] C:\Users\Gabriele Alessandro\.gradle\caches\transforms-1\files-1.1\play-services-gass-18.3.0.aar\2cd84f02612d09ee4e5ffce8de1a93d9\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-ads-lite:18.3.0] C:\Users\Gabriele Alessandro\.gradle\caches\transforms-1\files-1.1\play-services-ads-lite-18.3.0.aar\7f2a093917d4b7a6aafcea44b8c04dde\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-ads-lite:18.3.0] C:\Users\Gabriele Alessandro\.gradle\caches\transforms-1\files-1.1\play-services-ads-lite-18.3.0.aar\7f2a093917d4b7a6aafcea44b8c04dde\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:17.1.0] C:\Users\Gabriele Alessandro\.gradle\caches\transforms-1\files-1.1\play-services-measurement-sdk-api-17.1.0.aar\39ccf50b8ff791c16fc5a2d0cbd65c6e\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:17.1.0] C:\Users\Gabriele Alessandro\.gradle\caches\transforms-1\files-1.1\play-services-measurement-sdk-api-17.1.0.aar\39ccf50b8ff791c16fc5a2d0cbd65c6e\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-tasks:17.0.0] C:\Users\Gabriele Alessandro\.gradle\caches\transforms-1\files-1.1\play-services-tasks-17.0.0.aar\0d9a9c2542a4b32481b0edb9cbbc156b\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-tasks:17.0.0] C:\Users\Gabriele Alessandro\.gradle\caches\transforms-1\files-1.1\play-services-tasks-17.0.0.aar\0d9a9c2542a4b32481b0edb9cbbc156b\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-measurement-base:17.1.0] C:\Users\Gabriele Alessandro\.gradle\caches\transforms-1\files-1.1\play-services-measurement-base-17.1.0.aar\5735deeeb77d5946be38be9b3b5a8ed1\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-measurement-base:17.1.0] C:\Users\Gabriele Alessandro\.gradle\caches\transforms-1\files-1.1\play-services-measurement-base-17.1.0.aar\5735deeeb77d5946be38be9b3b5a8ed1\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-basement:17.0.0] C:\Users\Gabriele Alessandro\.gradle\caches\transforms-1\files-1.1\jetified-play-services-basement-17.0.0.aar\a3b0f777185124b4ec16bc7a2cb21402\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-basement:17.0.0] C:\Users\Gabriele Alessandro\.gradle\caches\transforms-1\files-1.1\jetified-play-services-basement-17.0.0.aar\a3b0f777185124b4ec16bc7a2cb21402\AndroidManifest.xml:20:5-44
+MERGED from [androidx.fragment:fragment:1.0.0] C:\Users\Gabriele Alessandro\.gradle\caches\transforms-1\files-1.1\fragment-1.0.0.aar\fa75b17399a512dabdf135a3c657e2cd\AndroidManifest.xml:20:5-44
+MERGED from [androidx.fragment:fragment:1.0.0] C:\Users\Gabriele Alessandro\.gradle\caches\transforms-1\files-1.1\fragment-1.0.0.aar\fa75b17399a512dabdf135a3c657e2cd\AndroidManifest.xml:20:5-44
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.0.0] C:\Users\Gabriele Alessandro\.gradle\caches\transforms-1\files-1.1\vectordrawable-animated-1.0.0.aar\c03cf986b00d7ec96aad50ec5df9bfa8\AndroidManifest.xml:20:5-44
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.0.0] C:\Users\Gabriele Alessandro\.gradle\caches\transforms-1\files-1.1\vectordrawable-animated-1.0.0.aar\c03cf986b00d7ec96aad50ec5df9bfa8\AndroidManifest.xml:20:5-44
+MERGED from [androidx.recyclerview:recyclerview:1.0.0] C:\Users\Gabriele Alessandro\.gradle\caches\transforms-1\files-1.1\recyclerview-1.0.0.aar\b227a32b174295ee25f2b5d130b48534\AndroidManifest.xml:20:5-44
+MERGED from [androidx.recyclerview:recyclerview:1.0.0] C:\Users\Gabriele Alessandro\.gradle\caches\transforms-1\files-1.1\recyclerview-1.0.0.aar\b227a32b174295ee25f2b5d130b48534\AndroidManifest.xml:20:5-44
+MERGED from [androidx.browser:browser:1.0.0] C:\Users\Gabriele Alessandro\.gradle\caches\transforms-1\files-1.1\browser-1.0.0.aar\d8c3248b6bb9fe47f2db951022925e3d\AndroidManifest.xml:20:5-44
+MERGED from [androidx.browser:browser:1.0.0] C:\Users\Gabriele Alessandro\.gradle\caches\transforms-1\files-1.1\browser-1.0.0.aar\d8c3248b6bb9fe47f2db951022925e3d\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\Gabriele Alessandro\.gradle\caches\transforms-1\files-1.1\legacy-support-core-ui-1.0.0.aar\498f06d2e69a70c4851c635d353669be\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\Gabriele Alessandro\.gradle\caches\transforms-1\files-1.1\legacy-support-core-ui-1.0.0.aar\498f06d2e69a70c4851c635d353669be\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\Gabriele Alessandro\.gradle\caches\transforms-1\files-1.1\legacy-support-core-utils-1.0.0.aar\de0b6dba2d1f7220b433188a215a8386\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\Gabriele Alessandro\.gradle\caches\transforms-1\files-1.1\legacy-support-core-utils-1.0.0.aar\de0b6dba2d1f7220b433188a215a8386\AndroidManifest.xml:20:5-44
+MERGED from [androidx.vectordrawable:vectordrawable:1.0.0] C:\Users\Gabriele Alessandro\.gradle\caches\transforms-1\files-1.1\vectordrawable-1.0.0.aar\5ab7826c142448491d86d1745ba4d07e\AndroidManifest.xml:20:5-44
+MERGED from [androidx.vectordrawable:vectordrawable:1.0.0] C:\Users\Gabriele Alessandro\.gradle\caches\transforms-1\files-1.1\vectordrawable-1.0.0.aar\5ab7826c142448491d86d1745ba4d07e\AndroidManifest.xml:20:5-44
+MERGED from [androidx.transition:transition:1.0.0] C:\Users\Gabriele Alessandro\.gradle\caches\transforms-1\files-1.1\transition-1.0.0.aar\58e91c5e36448fd28656c69a03e271bd\AndroidManifest.xml:20:5-44
+MERGED from [androidx.transition:transition:1.0.0] C:\Users\Gabriele Alessandro\.gradle\caches\transforms-1\files-1.1\transition-1.0.0.aar\58e91c5e36448fd28656c69a03e271bd\AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\Gabriele Alessandro\.gradle\caches\transforms-1\files-1.1\loader-1.0.0.aar\1e6c5c467ac523a83ecc3834561b2a9b\AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\Gabriele Alessandro\.gradle\caches\transforms-1\files-1.1\loader-1.0.0.aar\1e6c5c467ac523a83ecc3834561b2a9b\AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\Gabriele Alessandro\.gradle\caches\transforms-1\files-1.1\viewpager-1.0.0.aar\b9706a6a9e617710f8ee7e25ddfa775f\AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\Gabriele Alessandro\.gradle\caches\transforms-1\files-1.1\viewpager-1.0.0.aar\b9706a6a9e617710f8ee7e25ddfa775f\AndroidManifest.xml:20:5-44
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] C:\Users\Gabriele Alessandro\.gradle\caches\transforms-1\files-1.1\coordinatorlayout-1.0.0.aar\e609e233ac11c331ad42ba4bb54329f5\AndroidManifest.xml:20:5-44
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] C:\Users\Gabriele Alessandro\.gradle\caches\transforms-1\files-1.1\coordinatorlayout-1.0.0.aar\e609e233ac11c331ad42ba4bb54329f5\AndroidManifest.xml:20:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\Gabriele Alessandro\.gradle\caches\transforms-1\files-1.1\drawerlayout-1.0.0.aar\a133cbfde44a4e20a9d90b83b18c7e78\AndroidManifest.xml:20:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\Gabriele Alessandro\.gradle\caches\transforms-1\files-1.1\drawerlayout-1.0.0.aar\a133cbfde44a4e20a9d90b83b18c7e78\AndroidManifest.xml:20:5-44
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] C:\Users\Gabriele Alessandro\.gradle\caches\transforms-1\files-1.1\slidingpanelayout-1.0.0.aar\1c85eb6a8132426ecfb1c4da3505ad57\AndroidManifest.xml:20:5-44
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] C:\Users\Gabriele Alessandro\.gradle\caches\transforms-1\files-1.1\slidingpanelayout-1.0.0.aar\1c85eb6a8132426ecfb1c4da3505ad57\AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] C:\Users\Gabriele Alessandro\.gradle\caches\transforms-1\files-1.1\customview-1.0.0.aar\f5cb3f9018a14ae1ce202df667e63ffb\AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] C:\Users\Gabriele Alessandro\.gradle\caches\transforms-1\files-1.1\customview-1.0.0.aar\f5cb3f9018a14ae1ce202df667e63ffb\AndroidManifest.xml:20:5-44
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] C:\Users\Gabriele Alessandro\.gradle\caches\transforms-1\files-1.1\swiperefreshlayout-1.0.0.aar\637079c5598eb15ca0628385fa585e2c\AndroidManifest.xml:20:5-44
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] C:\Users\Gabriele Alessandro\.gradle\caches\transforms-1\files-1.1\swiperefreshlayout-1.0.0.aar\637079c5598eb15ca0628385fa585e2c\AndroidManifest.xml:20:5-44
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] C:\Users\Gabriele Alessandro\.gradle\caches\transforms-1\files-1.1\asynclayoutinflater-1.0.0.aar\4275a31cfc28ecb49a8c411246bba9f3\AndroidManifest.xml:20:5-44
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] C:\Users\Gabriele Alessandro\.gradle\caches\transforms-1\files-1.1\asynclayoutinflater-1.0.0.aar\4275a31cfc28ecb49a8c411246bba9f3\AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.0.0] C:\Users\Gabriele Alessandro\.gradle\caches\transforms-1\files-1.1\core-1.0.0.aar\1bb9c8013742b35a7b1383572b478042\AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.0.0] C:\Users\Gabriele Alessandro\.gradle\caches\transforms-1\files-1.1\core-1.0.0.aar\1bb9c8013742b35a7b1383572b478042\AndroidManifest.xml:20:5-44
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] C:\Users\Gabriele Alessandro\.gradle\caches\transforms-1\files-1.1\versionedparcelable-1.0.0.aar\4a8079ff7818b6d3a274a6666ab0bea4\AndroidManifest.xml:20:5-44
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] C:\Users\Gabriele Alessandro\.gradle\caches\transforms-1\files-1.1\versionedparcelable-1.0.0.aar\4a8079ff7818b6d3a274a6666ab0bea4\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\Gabriele Alessandro\.gradle\caches\transforms-1\files-1.1\cursoradapter-1.0.0.aar\f04ba73c1126be91851f2b8ab8024a65\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\Gabriele Alessandro\.gradle\caches\transforms-1\files-1.1\cursoradapter-1.0.0.aar\f04ba73c1126be91851f2b8ab8024a65\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\Gabriele Alessandro\.gradle\caches\transforms-1\files-1.1\cardview-1.0.0.aar\70a7706f1b4eb8be9584d876d9657c1a\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\Gabriele Alessandro\.gradle\caches\transforms-1\files-1.1\cardview-1.0.0.aar\70a7706f1b4eb8be9584d876d9657c1a\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.0.0] C:\Users\Gabriele Alessandro\.gradle\caches\transforms-1\files-1.1\lifecycle-runtime-2.0.0.aar\a4d9cc9b45eb1983914fca8343364c85\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.0.0] C:\Users\Gabriele Alessandro\.gradle\caches\transforms-1\files-1.1\lifecycle-runtime-2.0.0.aar\a4d9cc9b45eb1983914fca8343364c85\AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\Gabriele Alessandro\.gradle\caches\transforms-1\files-1.1\documentfile-1.0.0.aar\5a0ee73ffe6a3c2f6b8f268aa023ac36\AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\Gabriele Alessandro\.gradle\caches\transforms-1\files-1.1\documentfile-1.0.0.aar\5a0ee73ffe6a3c2f6b8f268aa023ac36\AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\Gabriele Alessandro\.gradle\caches\transforms-1\files-1.1\localbroadcastmanager-1.0.0.aar\c3ef51192043faec42caccdc2e46416a\AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\Gabriele Alessandro\.gradle\caches\transforms-1\files-1.1\localbroadcastmanager-1.0.0.aar\c3ef51192043faec42caccdc2e46416a\AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] C:\Users\Gabriele Alessandro\.gradle\caches\transforms-1\files-1.1\print-1.0.0.aar\29aceaa4eb2d3f237037292c16026617\AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] C:\Users\Gabriele Alessandro\.gradle\caches\transforms-1\files-1.1\print-1.0.0.aar\29aceaa4eb2d3f237037292c16026617\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.0.0] C:\Users\Gabriele Alessandro\.gradle\caches\transforms-1\files-1.1\lifecycle-viewmodel-2.0.0.aar\a9be202b08fc117dd72f071c8628dbb1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.0.0] C:\Users\Gabriele Alessandro\.gradle\caches\transforms-1\files-1.1\lifecycle-viewmodel-2.0.0.aar\a9be202b08fc117dd72f071c8628dbb1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\Gabriele Alessandro\.gradle\caches\transforms-1\files-1.1\interpolator-1.0.0.aar\c6f93eb3b7f1a9bf649523ee15c01b77\AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\Gabriele Alessandro\.gradle\caches\transforms-1\files-1.1\interpolator-1.0.0.aar\c6f93eb3b7f1a9bf649523ee15c01b77\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\Gabriele Alessandro\.gradle\caches\transforms-1\files-1.1\lifecycle-livedata-2.0.0.aar\520f6daf598b184f23dd44a03b3ef00c\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\Gabriele Alessandro\.gradle\caches\transforms-1\files-1.1\lifecycle-livedata-2.0.0.aar\520f6daf598b184f23dd44a03b3ef00c\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\Gabriele Alessandro\.gradle\caches\transforms-1\files-1.1\lifecycle-livedata-core-2.0.0.aar\3b7f9aa9a7a7c5c5f31a65d65572791f\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\Gabriele Alessandro\.gradle\caches\transforms-1\files-1.1\lifecycle-livedata-core-2.0.0.aar\3b7f9aa9a7a7c5c5f31a65d65572791f\AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\Gabriele Alessandro\.gradle\caches\transforms-1\files-1.1\core-runtime-2.0.0.aar\e25baeef11cfb5050444936af6ef1e94\AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\Gabriele Alessandro\.gradle\caches\transforms-1\files-1.1\core-runtime-2.0.0.aar\e25baeef11cfb5050444936af6ef1e94\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-ads-base:18.3.0] C:\Users\Gabriele Alessandro\.gradle\caches\transforms-1\files-1.1\play-services-ads-base-18.3.0.aar\c2ae65ff2b38afafebe38ad7b6d16285\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-ads-base:18.3.0] C:\Users\Gabriele Alessandro\.gradle\caches\transforms-1\files-1.1\play-services-ads-base-18.3.0.aar\c2ae65ff2b38afafebe38ad7b6d16285\AndroidManifest.xml:5:5-44
+INJECTED from C:\Users\Gabriele Alessandro\Documents\ShinyHunter\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\Gabriele Alessandro\Documents\ShinyHunter\app\src\main\AndroidManifest.xml
+	tools:overrideLibrary
+		ADDED from [com.google.android.gms:play-services-ads:18.3.0] C:\Users\Gabriele Alessandro\.gradle\caches\transforms-1\files-1.1\jetified-play-services-ads-18.3.0.aar\c5ef5134c58b19800884f41bb48da495\AndroidManifest.xml:23:9-49
+	android:targetSdkVersion
+		INJECTED from C:\Users\Gabriele Alessandro\Documents\ShinyHunter\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Gabriele Alessandro\Documents\ShinyHunter\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Gabriele Alessandro\Documents\ShinyHunter\app\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from C:\Users\Gabriele Alessandro\Documents\ShinyHunter\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Gabriele Alessandro\Documents\ShinyHunter\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Gabriele Alessandro\Documents\ShinyHunter\app\src\main\AndroidManifest.xml
+uses-permission#android.permission.INTERNET
+ADDED from [com.google.android.gms:play-services-ads-lite:18.3.0] C:\Users\Gabriele Alessandro\.gradle\caches\transforms-1\files-1.1\play-services-ads-lite-18.3.0.aar\7f2a093917d4b7a6aafcea44b8c04dde\AndroidManifest.xml:23:5-67
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:17.1.0] C:\Users\Gabriele Alessandro\.gradle\caches\transforms-1\files-1.1\play-services-measurement-sdk-api-17.1.0.aar\39ccf50b8ff791c16fc5a2d0cbd65c6e\AndroidManifest.xml:23:5-67
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:17.1.0] C:\Users\Gabriele Alessandro\.gradle\caches\transforms-1\files-1.1\play-services-measurement-sdk-api-17.1.0.aar\39ccf50b8ff791c16fc5a2d0cbd65c6e\AndroidManifest.xml:23:5-67
+	android:name
+		ADDED from [com.google.android.gms:play-services-ads-lite:18.3.0] C:\Users\Gabriele Alessandro\.gradle\caches\transforms-1\files-1.1\play-services-ads-lite-18.3.0.aar\7f2a093917d4b7a6aafcea44b8c04dde\AndroidManifest.xml:23:22-64
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from [com.google.android.gms:play-services-ads-lite:18.3.0] C:\Users\Gabriele Alessandro\.gradle\caches\transforms-1\files-1.1\play-services-ads-lite-18.3.0.aar\7f2a093917d4b7a6aafcea44b8c04dde\AndroidManifest.xml:24:5-79
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:17.1.0] C:\Users\Gabriele Alessandro\.gradle\caches\transforms-1\files-1.1\play-services-measurement-sdk-api-17.1.0.aar\39ccf50b8ff791c16fc5a2d0cbd65c6e\AndroidManifest.xml:24:5-79
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:17.1.0] C:\Users\Gabriele Alessandro\.gradle\caches\transforms-1\files-1.1\play-services-measurement-sdk-api-17.1.0.aar\39ccf50b8ff791c16fc5a2d0cbd65c6e\AndroidManifest.xml:24:5-79
+	android:name
+		ADDED from [com.google.android.gms:play-services-ads-lite:18.3.0] C:\Users\Gabriele Alessandro\.gradle\caches\transforms-1\files-1.1\play-services-ads-lite-18.3.0.aar\7f2a093917d4b7a6aafcea44b8c04dde\AndroidManifest.xml:24:22-76
+activity#com.google.android.gms.ads.AdActivity
+ADDED from [com.google.android.gms:play-services-ads-lite:18.3.0] C:\Users\Gabriele Alessandro\.gradle\caches\transforms-1\files-1.1\play-services-ads-lite-18.3.0.aar\7f2a093917d4b7a6aafcea44b8c04dde\AndroidManifest.xml:29:9-33:64
+	android:exported
+		ADDED from [com.google.android.gms:play-services-ads-lite:18.3.0] C:\Users\Gabriele Alessandro\.gradle\caches\transforms-1\files-1.1\play-services-ads-lite-18.3.0.aar\7f2a093917d4b7a6aafcea44b8c04dde\AndroidManifest.xml:32:13-37
+	android:configChanges
+		ADDED from [com.google.android.gms:play-services-ads-lite:18.3.0] C:\Users\Gabriele Alessandro\.gradle\caches\transforms-1\files-1.1\play-services-ads-lite-18.3.0.aar\7f2a093917d4b7a6aafcea44b8c04dde\AndroidManifest.xml:31:13-122
+	android:theme
+		ADDED from [com.google.android.gms:play-services-ads-lite:18.3.0] C:\Users\Gabriele Alessandro\.gradle\caches\transforms-1\files-1.1\play-services-ads-lite-18.3.0.aar\7f2a093917d4b7a6aafcea44b8c04dde\AndroidManifest.xml:33:13-61
+	android:name
+		ADDED from [com.google.android.gms:play-services-ads-lite:18.3.0] C:\Users\Gabriele Alessandro\.gradle\caches\transforms-1\files-1.1\play-services-ads-lite-18.3.0.aar\7f2a093917d4b7a6aafcea44b8c04dde\AndroidManifest.xml:30:13-65
+provider#com.google.android.gms.ads.MobileAdsInitProvider
+ADDED from [com.google.android.gms:play-services-ads-lite:18.3.0] C:\Users\Gabriele Alessandro\.gradle\caches\transforms-1\files-1.1\play-services-ads-lite-18.3.0.aar\7f2a093917d4b7a6aafcea44b8c04dde\AndroidManifest.xml:35:9-39:39
+	android:authorities
+		ADDED from [com.google.android.gms:play-services-ads-lite:18.3.0] C:\Users\Gabriele Alessandro\.gradle\caches\transforms-1\files-1.1\play-services-ads-lite-18.3.0.aar\7f2a093917d4b7a6aafcea44b8c04dde\AndroidManifest.xml:37:13-73
+	android:exported
+		ADDED from [com.google.android.gms:play-services-ads-lite:18.3.0] C:\Users\Gabriele Alessandro\.gradle\caches\transforms-1\files-1.1\play-services-ads-lite-18.3.0.aar\7f2a093917d4b7a6aafcea44b8c04dde\AndroidManifest.xml:38:13-37
+	android:initOrder
+		ADDED from [com.google.android.gms:play-services-ads-lite:18.3.0] C:\Users\Gabriele Alessandro\.gradle\caches\transforms-1\files-1.1\play-services-ads-lite-18.3.0.aar\7f2a093917d4b7a6aafcea44b8c04dde\AndroidManifest.xml:39:13-36
+	android:name
+		ADDED from [com.google.android.gms:play-services-ads-lite:18.3.0] C:\Users\Gabriele Alessandro\.gradle\caches\transforms-1\files-1.1\play-services-ads-lite-18.3.0.aar\7f2a093917d4b7a6aafcea44b8c04dde\AndroidManifest.xml:36:13-76
+uses-permission#android.permission.WAKE_LOCK
+ADDED from [com.google.android.gms:play-services-measurement-sdk-api:17.1.0] C:\Users\Gabriele Alessandro\.gradle\caches\transforms-1\files-1.1\play-services-measurement-sdk-api-17.1.0.aar\39ccf50b8ff791c16fc5a2d0cbd65c6e\AndroidManifest.xml:25:5-68
+	android:name
+		ADDED from [com.google.android.gms:play-services-measurement-sdk-api:17.1.0] C:\Users\Gabriele Alessandro\.gradle\caches\transforms-1\files-1.1\play-services-measurement-sdk-api-17.1.0.aar\39ccf50b8ff791c16fc5a2d0cbd65c6e\AndroidManifest.xml:25:22-65
+meta-data#com.google.android.gms.version
+ADDED from [com.google.android.gms:play-services-basement:17.0.0] C:\Users\Gabriele Alessandro\.gradle\caches\transforms-1\files-1.1\jetified-play-services-basement-17.0.0.aar\a3b0f777185124b4ec16bc7a2cb21402\AndroidManifest.xml:23:9-25:69
+	android:value
+		ADDED from [com.google.android.gms:play-services-basement:17.0.0] C:\Users\Gabriele Alessandro\.gradle\caches\transforms-1\files-1.1\jetified-play-services-basement-17.0.0.aar\a3b0f777185124b4ec16bc7a2cb21402\AndroidManifest.xml:25:13-66
+	android:name
+		ADDED from [com.google.android.gms:play-services-basement:17.0.0] C:\Users\Gabriele Alessandro\.gradle\caches\transforms-1\files-1.1\jetified-play-services-basement-17.0.0.aar\a3b0f777185124b4ec16bc7a2cb21402\AndroidManifest.xml:24:13-58
