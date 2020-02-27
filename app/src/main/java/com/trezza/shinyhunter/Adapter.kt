@@ -7,101 +7,117 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.*
-import com.trezza.shinyhunter.MainActivity.Companion.catchedPokemon
-import com.trezza.shinyhunter.MainActivity.Companion.contator
-import com.trezza.shinyhunter.MainActivity.Companion.pokemonTot
-import com.trezza.shinyhunter.MainActivity.Companion.progress
-import com.trezza.shinyhunter.MainActivity.Companion.shinyChatched
+import com.daimajia.numberprogressbar.NumberProgressBar
+import com.trezza.shinyhunter.MainActivity.Companion.listaTriplettePokemonCatturati
 import kotlinx.android.synthetic.main.adapter_pokemon.view.*
 
 class Adapter(private var context: Context,
-              private var imagesPokemonList : List<List<Drawable>>,
+              private var listaTriplettePokemon : List<List<Drawable>>,
+              private var barraDiPercentualeShinyCatturati : NumberProgressBar,
+              private var labelDiPercentualeShinyCatturati : TextView,
               private var larghezzaDisplay: Int) : BaseAdapter() {
 
     @SuppressLint("ViewHolder")
-    override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View {
+    override fun getView(posizioneTripletta: Int, convertView: View?, parent: ViewGroup?): View {
         val newView: View = LayoutInflater.from(context).inflate(R.layout.adapter_pokemon, parent, false)
-
-        val pokemon1 = newView.immaginePokemon1
-        val pokemon2 = newView.immaginePokemon2
-        val pokemon3 = newView.immaginePokemon3
-        val item = imagesPokemonList[position]
-
-        setDrawable(pokemon1,pokemon2,pokemon3,item)
-        setGrandezzaImmagine(pokemon1,pokemon2,pokemon3)
-        eventiClickVeloce(pokemon1,pokemon2,pokemon3,position,item)
-        eventiClickLunghi(pokemon1, pokemon2, pokemon3, position)
-
-        if(catchedPokemon[position][0] == 1)
-            pokemon1.setBackgroundResource(R.drawable.catched)
-        if(catchedPokemon[position][1] == 1)
-            pokemon2.setBackgroundResource(R.drawable.catched)
-        if(catchedPokemon[position][2] == 1)
-            pokemon3.setBackgroundResource(R.drawable.catched)
-
+        val tripletta = listaTriplettePokemon[posizioneTripletta]
+        val immaginiPokemon = listOf(newView.immaginePokemon1,newView.immaginePokemon2,newView.immaginePokemon3)
+        inizializzaShinyCatturati(immaginiPokemon, posizioneTripletta)
+        eventoClickVeloce(immaginiPokemon, tripletta, posizioneTripletta)
+        eventoClickLungo(immaginiPokemon, posizioneTripletta)
+        setImmagine(immaginiPokemon, tripletta)
         return newView
     }
 
-    private fun setDrawable(pokemon1 : ImageView, pokemon2 : ImageView, pokemon3 : ImageView, tripletta : List<Drawable>){
-        pokemon1.setImageDrawable(tripletta[0])
-        pokemon2.setImageDrawable(tripletta[1])
-        pokemon3.setImageDrawable(tripletta[2])
+    private fun inizializzaShinyCatturati(immaginiPokemon : List<ImageView>, posizioneTripletta: Int){
+        for((i,immaginePokemon) in immaginiPokemon.withIndex())
+            if(listaTriplettePokemonCatturati[posizioneTripletta][i] == 1)
+                immaginePokemon.setBackgroundResource(R.drawable.catched)
     }
 
-    private fun setGrandezzaImmagine(pokemon1 : ImageView, pokemon2 : ImageView, pokemon3 : ImageView){
-        val params: LinearLayout.LayoutParams = LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, larghezzaDisplay/3)
-        params.width = larghezzaDisplay/3
-        pokemon1.layoutParams = params
-        pokemon2.layoutParams = params
-        pokemon3.layoutParams = params
+    private fun eventoClickVeloce(immaginiPokemon : List<ImageView>, tripletta: List<Drawable>, posizioneTripletta: Int){
+        for((i,immaginePokemon) in immaginiPokemon.withIndex())
+            clickVeloce(immaginePokemon,i, tripletta, posizioneTripletta)
     }
 
-    private fun eventiClickVeloce(pokemon1 : ImageView, pokemon2 : ImageView, pokemon3 : ImageView, position: Int, tripletta : List<Drawable>){
-        clickVeloce(pokemon1,position,0, tripletta[0].alpha)
-        clickVeloce(pokemon2,position,1, tripletta[1].alpha)
-        clickVeloce(pokemon3,position,2, tripletta[2].alpha)
+    private fun eventoClickLungo(immaginiPokemon : List<ImageView>, posizioneTripletta: Int){
+        for((i,immaginePokemon) in immaginiPokemon.withIndex())
+            clickLungo(immaginePokemon,i, posizioneTripletta)
     }
 
-    private fun clickVeloce(pokemon : ImageView, positionTripletta: Int, positionPokemon: Int, alpha : Int){
+    private fun clickVeloce(pokemon : ImageView, posizionePokemon: Int, tripletta : List<Drawable>, posizioneTripletta: Int){
         pokemon.setOnClickListener {
-            if(alpha != 0){
-                if(catchedPokemon[positionTripletta][positionPokemon] == 0){
-                    progress.progress = ++shinyChatched
-                    contator.text = "Shiny: $shinyChatched / $pokemonTot"
-                }
-                catchedPokemon[positionTripletta][positionPokemon] = 1
-                pokemon.setBackgroundResource(R.drawable.catched)
+            if(!isShinyCatturato(posizioneTripletta,posizionePokemon) && !isPosizioneVuota(tripletta, posizionePokemon)){
+                incrementaShinyCatturati()
+                catturaShiny(pokemon,posizioneTripletta,posizionePokemon)
             }
         }
     }
 
-    private fun eventiClickLunghi(pokemon1 : ImageView, pokemon2 : ImageView, pokemon3 : ImageView, position: Int){
-        clickLungo(pokemon1,position,0)
-        clickLungo(pokemon2,position,1)
-        clickLungo(pokemon3,position,2)
-    }
-
-    private fun clickLungo(pokemon : ImageView, positionTripletta: Int, positionPokemon: Int){
+    private fun clickLungo(pokemon : ImageView, posizionePokemon: Int, posizioneTripletta: Int){
         pokemon.setOnLongClickListener{
-            if(catchedPokemon[positionTripletta][positionPokemon] == 1){
-                progress.progress = --shinyChatched
-                contator.text = "Shiny: $shinyChatched / $pokemonTot"
+            if(isShinyCatturato(posizioneTripletta,posizionePokemon)){
+                decrementaShinyCatturati()
+                liberaShiny(pokemon, posizioneTripletta, posizionePokemon)
             }
-            pokemon.background = null
-            catchedPokemon[positionTripletta][positionPokemon] = 0
             true
         }
     }
 
+    @SuppressLint("SetTextI18n")
+    private fun incrementaShinyCatturati(){
+        val shinyCatturati = ++barraDiPercentualeShinyCatturati.progress
+        barraDiPercentualeShinyCatturati.progress = shinyCatturati
+        labelDiPercentualeShinyCatturati.text = "Shiny: $shinyCatturati / ${barraDiPercentualeShinyCatturati.max}"
+    }
+
+    @SuppressLint("SetTextI18n")
+    private fun decrementaShinyCatturati(){
+        val shinyCatturati = --barraDiPercentualeShinyCatturati.progress
+        barraDiPercentualeShinyCatturati.progress = shinyCatturati
+        labelDiPercentualeShinyCatturati.text = "Shiny: $shinyCatturati / ${barraDiPercentualeShinyCatturati.max}"
+    }
+
+    private fun catturaShiny(pokemon : ImageView, posizioneTripletta : Int, posizionePokemon: Int ){
+        listaTriplettePokemonCatturati[posizioneTripletta][posizionePokemon] = 1
+        pokemon.setBackgroundResource(R.drawable.catched)
+    }
+
+    private fun liberaShiny(pokemon : ImageView, posizioneTripletta : Int, posizionePokemon: Int ){
+        listaTriplettePokemonCatturati[posizioneTripletta][posizionePokemon] = 0
+        pokemon.background = null
+    }
+
+    private fun isShinyCatturato(posizioneTripletta : Int, posizionePokemon: Int ) : Boolean{
+        return listaTriplettePokemonCatturati[posizioneTripletta][posizionePokemon] == 1
+    }
+
+    private fun isPosizioneVuota(tripletta: List<Drawable>, posizionePokemon: Int) : Boolean{
+        return tripletta[posizionePokemon].alpha == 0
+    }
+
+    private fun setImmagine(immaginiPokemon : List<ImageView>, tripletta : List<Drawable>){
+        for((i,immaginePokemon) in immaginiPokemon.withIndex()){
+            immaginePokemon.setImageDrawable(tripletta[i])
+            setGrandezzaImmagine(immaginePokemon)
+        }
+    }
+
+    private fun setGrandezzaImmagine(pokemon : ImageView){
+        val params: LinearLayout.LayoutParams = LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, larghezzaDisplay/3)
+        params.width = larghezzaDisplay/3
+        pokemon.layoutParams = params
+    }
+
     override fun getItem(position: Int): Any{
-        return imagesPokemonList[position]
+        return listaTriplettePokemon[position]
     }
 
     override fun getItemId(position: Int): Long {
-        return imagesPokemonList.indexOf(imagesPokemonList[position]).toLong()
+        return listaTriplettePokemon.indexOf(listaTriplettePokemon[position]).toLong()
     }
 
     override fun getCount(): Int{
-        return imagesPokemonList.size
+        return listaTriplettePokemon.size
     }
 }

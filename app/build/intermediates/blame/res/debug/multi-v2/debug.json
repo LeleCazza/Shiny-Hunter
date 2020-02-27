@@ -1048,21 +1048,6 @@
             ]
         },
         {
-            "outputFile": "C:\\Users\\Gabriele Alessandro\\Documents\\ShinyHunter\\app\\build\\intermediates\\res\\merged\\debug\\values-night-v8_values-night-v8.arsc.flat",
-            "map": [
-                {
-                    "source": "C:\\Users\\Gabriele Alessandro\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-1.0.0.aar\\9a06925faedcba99bc0b093da87cb59f\\res\\values-night-v8\\values-night-v8.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8",
-                        "startColumns": "4,4,4,4,4,4,4",
-                        "startOffsets": "55,125,209,293,389,491,593",
-                        "endColumns": "69,83,83,95,101,101,93",
-                        "endOffsets": "120,204,288,384,486,588,682"
-                    }
-                }
-            ]
-        },
-        {
             "outputFile": "C:\\Users\\Gabriele Alessandro\\Documents\\ShinyHunter\\app\\build\\intermediates\\res\\merged\\debug\\values-ml_values-ml.arsc.flat",
             "map": [
                 {
@@ -1131,6 +1116,21 @@
                         "startOffsets": "3092,3172,3293,3367,3439,3526,3636",
                         "endColumns": "79,120,73,71,86,109,80",
                         "endOffsets": "3167,3288,3362,3434,3521,3631,3712"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "C:\\Users\\Gabriele Alessandro\\Documents\\ShinyHunter\\app\\build\\intermediates\\res\\merged\\debug\\values-night-v8_values-night-v8.arsc.flat",
+            "map": [
+                {
+                    "source": "C:\\Users\\Gabriele Alessandro\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-1.0.0.aar\\9a06925faedcba99bc0b093da87cb59f\\res\\values-night-v8\\values-night-v8.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8",
+                        "startColumns": "4,4,4,4,4,4,4",
+                        "startOffsets": "55,125,209,293,389,491,593",
+                        "endColumns": "69,83,83,95,101,101,93",
+                        "endOffsets": "120,204,288,384,486,588,682"
                     }
                 }
             ]
@@ -1903,6 +1903,41 @@
             ]
         },
         {
+            "outputFile": "C:\\Users\\Gabriele Alessandro\\Documents\\ShinyHunter\\app\\build\\intermediates\\res\\merged\\debug\\values-v23_values-v23.arsc.flat",
+            "map": [
+                {
+                    "source": "C:\\Users\\Gabriele Alessandro\\.gradle\\caches\\transforms-1\\files-1.1\\cardview-1.0.0.aar\\70a7706f1b4eb8be9584d876d9657c1a\\res\\values-v23\\values-v23.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "4",
+                        "endColumns": "12",
+                        "endOffsets": "200"
+                    },
+                    "to": {
+                        "startLines": "37",
+                        "startColumns": "4",
+                        "startOffsets": "2646",
+                        "endLines": "39",
+                        "endColumns": "12",
+                        "endOffsets": "2791"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Gabriele Alessandro\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-1.0.0.aar\\9a06925faedcba99bc0b093da87cb59f\\res\\values-v23\\values-v23.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,19,32,33,34,35,36",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,190,325,400,487,1277,2079,2206,2311,2426,2533",
+                        "endLines": "2,3,4,5,18,31,32,33,34,35,36",
+                        "endColumns": "134,134,74,86,12,12,126,104,114,106,112",
+                        "endOffsets": "185,320,395,482,1272,2074,2201,2306,2421,2528,2641"
+                    }
+                }
+            ]
+        },
+        {
             "outputFile": "C:\\Users\\Gabriele Alessandro\\Documents\\ShinyHunter\\app\\build\\intermediates\\res\\merged\\debug\\values-is_values-is.arsc.flat",
             "map": [
                 {
@@ -1971,41 +2006,6 @@
                         "startOffsets": "105,205,302,414,499,600,714,794,874,965,1058,1154,1248,1355,1448,1543,1638,1729,1823,1904,2014,2122,2220,2329,2428,2531,2686,3558",
                         "endColumns": "99,96,111,84,100,113,79,79,90,92,95,93,106,92,94,94,90,93,80,109,107,97,108,98,102,154,97,80",
                         "endOffsets": "200,297,409,494,595,709,789,869,960,1053,1149,1243,1350,1443,1538,1633,1724,1818,1899,2009,2117,2215,2324,2423,2526,2681,2779,3634"
-                    }
-                }
-            ]
-        },
-        {
-            "outputFile": "C:\\Users\\Gabriele Alessandro\\Documents\\ShinyHunter\\app\\build\\intermediates\\res\\merged\\debug\\values-v23_values-v23.arsc.flat",
-            "map": [
-                {
-                    "source": "C:\\Users\\Gabriele Alessandro\\.gradle\\caches\\transforms-1\\files-1.1\\cardview-1.0.0.aar\\70a7706f1b4eb8be9584d876d9657c1a\\res\\values-v23\\values-v23.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endLines": "4",
-                        "endColumns": "12",
-                        "endOffsets": "200"
-                    },
-                    "to": {
-                        "startLines": "37",
-                        "startColumns": "4",
-                        "startOffsets": "2646",
-                        "endLines": "39",
-                        "endColumns": "12",
-                        "endOffsets": "2791"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\Gabriele Alessandro\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-1.0.0.aar\\9a06925faedcba99bc0b093da87cb59f\\res\\values-v23\\values-v23.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,19,32,33,34,35,36",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,190,325,400,487,1277,2079,2206,2311,2426,2533",
-                        "endLines": "2,3,4,5,18,31,32,33,34,35,36",
-                        "endColumns": "134,134,74,86,12,12,126,104,114,106,112",
-                        "endOffsets": "185,320,395,482,1272,2074,2201,2306,2421,2528,2641"
                     }
                 }
             ]
@@ -3032,6 +3032,40 @@
             ]
         },
         {
+            "outputFile": "C:\\Users\\Gabriele Alessandro\\Documents\\ShinyHunter\\app\\build\\intermediates\\res\\merged\\debug\\values-v16_values-v16.arsc.flat",
+            "map": [
+                {
+                    "source": "C:\\Users\\Gabriele Alessandro\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-1.0.0.aar\\9a06925faedcba99bc0b093da87cb59f\\res\\values-v16\\values-v16.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "5",
+                        "endColumns": "12",
+                        "endOffsets": "223"
+                    },
+                    "to": {
+                        "startLines": "3",
+                        "startColumns": "4",
+                        "startOffsets": "121",
+                        "endLines": "6",
+                        "endColumns": "12",
+                        "endOffsets": "289"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Gabriele Alessandro\\.gradle\\caches\\transforms-1\\files-1.1\\core-1.0.0.aar\\1bb9c8013742b35a7b1383572b478042\\res\\values-v16\\values-v16.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "65",
+                        "endOffsets": "116"
+                    }
+                }
+            ]
+        },
+        {
             "outputFile": "C:\\Users\\Gabriele Alessandro\\Documents\\ShinyHunter\\app\\build\\intermediates\\res\\merged\\debug\\values-km_values-km.arsc.flat",
             "map": [
                 {
@@ -3100,40 +3134,6 @@
                         "startOffsets": "3742",
                         "endColumns": "100",
                         "endOffsets": "3838"
-                    }
-                }
-            ]
-        },
-        {
-            "outputFile": "C:\\Users\\Gabriele Alessandro\\Documents\\ShinyHunter\\app\\build\\intermediates\\res\\merged\\debug\\values-v16_values-v16.arsc.flat",
-            "map": [
-                {
-                    "source": "C:\\Users\\Gabriele Alessandro\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-1.0.0.aar\\9a06925faedcba99bc0b093da87cb59f\\res\\values-v16\\values-v16.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endLines": "5",
-                        "endColumns": "12",
-                        "endOffsets": "223"
-                    },
-                    "to": {
-                        "startLines": "3",
-                        "startColumns": "4",
-                        "startOffsets": "121",
-                        "endLines": "6",
-                        "endColumns": "12",
-                        "endOffsets": "289"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\Gabriele Alessandro\\.gradle\\caches\\transforms-1\\files-1.1\\core-1.0.0.aar\\1bb9c8013742b35a7b1383572b478042\\res\\values-v16\\values-v16.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "65",
-                        "endOffsets": "116"
                     }
                 }
             ]
