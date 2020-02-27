@@ -5,9 +5,9 @@
     build-mode="COLD"
     density="420dpi"
     format="10"
-    ir-eligibility="METHOD_DELETED"
+    ir-eligibility="METHOD_ADDED"
     plugin-version="3.3.2"
-    timestamp="1582813607892"
+    timestamp="1582814493334"
     token="2503709468702086300"
     verifier="COLD_SWAP_REQUESTED" >
 
@@ -19,7 +19,7 @@
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="12" />
+        duration="8" />
     <task
         name="verifier"
         duration="2" />
@@ -74,8 +74,8 @@
     </build>
     <build
         build-mode="COLD"
-        ir-eligibility="METHOD_DELETED"
-        timestamp="1582813607892"
+        ir-eligibility="METHOD_ADDED"
+        timestamp="1582814493334"
         verifier="COLD_SWAP_REQUESTED" >
         <artifact
             location="C:\Users\Gabriele Alessandro\Documents\ShinyHunter\app\build\intermediates\split-apk\debug\slices\slice_8.apk"

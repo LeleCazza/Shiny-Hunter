@@ -27,6 +27,7 @@ class PokemonDataCreator(private var listaNomiImmaginiPokemon : Array<String>, p
         var posizione = 0
         var posizionePokemonPrecedente = 0
         for (pokemon in listaNomiImmaginiPokemon){
+            Log.i("POKEMON", pokemon)
             val posizionePokemon = pokemon.split("_")[1].toInt()
             if(posizione == 3){
                 aggiungiTriplettaAListaTriplette()
@@ -48,6 +49,7 @@ class PokemonDataCreator(private var listaNomiImmaginiPokemon : Array<String>, p
                 posizione = 1
             }
         }
+        concludiUltimaTripletta(immagineVuota,posizione)
     }
 
     private fun creaImmagineVuota() : Drawable{
@@ -57,24 +59,35 @@ class PokemonDataCreator(private var listaNomiImmaginiPokemon : Array<String>, p
     }
 
     private fun aggiungiTriplettaAListaTriplette(){
+        Log.i("AGGIUNTA TRIPLETTA", "OK")
         listaTriplettePokemon.add(triplettaPokemon)
         listaTriplettePokemonCatturati.add(triplettaPokemonCatturati)
     }
 
     private fun creaNuovaTripletta(){
+        Log.i("CREATA TRIPLETTA", "OK")
         triplettaPokemon = mutableListOf()
         triplettaPokemonCatturati = mutableListOf()
     }
 
     private fun aggiungiPokemonATripletta(file : String){
+        Log.i("AGGIUNTO POKEMON", "OK")
         triplettaPokemon.add(Drawable.createFromStream(application.assets.open("pokemon/$file"),null))
         triplettaPokemonCatturati.add(0)
     }
 
-    private fun aggiungiImmaginiVuoteATripletta(immagineVuota : Drawable, sizeTripletta : Int){
-        repeat(3 - sizeTripletta){
+    private fun aggiungiImmaginiVuoteATripletta(immagineVuota : Drawable, posizione : Int){
+        repeat(3 - posizione){
+            Log.i("AGGIUNTA IMMAGINE VUOTA", "OK")
             triplettaPokemon.add(immagineVuota)
             triplettaPokemonCatturati.add(0)
+        }
+    }
+
+    private fun concludiUltimaTripletta(immagineVuota : Drawable, posizione : Int){
+        if(triplettaPokemon.size < 3){
+            aggiungiImmaginiVuoteATripletta(immagineVuota,posizione)
+            aggiungiTriplettaAListaTriplette()
         }
     }
 }
