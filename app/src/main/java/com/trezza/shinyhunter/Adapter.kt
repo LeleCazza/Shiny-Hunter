@@ -26,6 +26,7 @@ class Adapter(private var context: Context,
         eventoClickVeloce(immaginiPokemon, tripletta, posizioneTripletta)
         eventoClickLungo(immaginiPokemon, posizioneTripletta)
         setImmagine(immaginiPokemon, tripletta)
+        setDimensioniImmagini(immaginiPokemon, tripletta)
         return newView
     }
 
@@ -97,16 +98,45 @@ class Adapter(private var context: Context,
     }
 
     private fun setImmagine(immaginiPokemon : List<ImageView>, tripletta : List<Drawable>){
-        for((i,immaginePokemon) in immaginiPokemon.withIndex()){
+        for((i,immaginePokemon) in immaginiPokemon.withIndex())
             immaginePokemon.setImageDrawable(tripletta[i])
-            setGrandezzaImmagine(immaginePokemon)
+    }
+
+    private fun setDimensioniImmagini(immaginiPokemon : List<ImageView>, tripletta : List<Drawable>){
+        var immaginiVuote = 0
+        for(disegnoPokemon in tripletta)
+            if(disegnoPokemon.alpha == 0)
+                immaginiVuote++
+        when (immaginiVuote) {
+            1 -> mostraDueImmagini(immaginiPokemon)
+            2 -> mostraUnImmagine(immaginiPokemon)
+            else -> mostraTreImmagini(immaginiPokemon)
         }
     }
 
-    private fun setGrandezzaImmagine(pokemon : ImageView){
-        val params: LinearLayout.LayoutParams = LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, larghezzaDisplay/3)
-        params.width = larghezzaDisplay/3
-        pokemon.layoutParams = params
+    private fun mostraUnImmagine(immaginiPokemon : List<ImageView>){
+        val params: LinearLayout.LayoutParams = LinearLayout.LayoutParams(larghezzaDisplay/3, larghezzaDisplay/3)
+        params.leftMargin = larghezzaDisplay/3
+        params.rightMargin = larghezzaDisplay/3
+        immaginiPokemon[0].layoutParams = params
+        immaginiPokemon[1].visibility = View.GONE
+        immaginiPokemon[2].visibility = View.GONE
+    }
+
+    private fun mostraDueImmagini(immaginiPokemon : List<ImageView>){
+        var params: LinearLayout.LayoutParams = LinearLayout.LayoutParams(larghezzaDisplay/3, larghezzaDisplay/3)
+        params.leftMargin = larghezzaDisplay/6
+        immaginiPokemon[0].layoutParams = params
+        params = LinearLayout.LayoutParams(larghezzaDisplay/3, larghezzaDisplay/3)
+        immaginiPokemon[1].layoutParams = params
+        immaginiPokemon[2].visibility = View.GONE
+    }
+
+    private fun mostraTreImmagini(immaginiPokemon: List<ImageView>){
+        val params: LinearLayout.LayoutParams = LinearLayout.LayoutParams(larghezzaDisplay/3, larghezzaDisplay/3)
+        immaginiPokemon[0].layoutParams = params
+        immaginiPokemon[1].layoutParams = params
+        immaginiPokemon[2].layoutParams = params
     }
 
     override fun getItem(position: Int): Any{

@@ -49,5 +49,9 @@
     </com.google.android.gms.ads.AdView>
 </LinearLayout>
 
-<!--- TEST: ads:adUnitId="ca-app-pub-3940256099942544/6300978111"    -->
-<!--- RELEASE: ads:adUnitId="ca-app-pub-4338558741002224/8225441708" -->
+<!---
+TEST:
+ads:adUnitId="ca-app-pub-3940256099942544/6300978111"
+RELEASE:
+ads:adUnitId="ca-app-pub-4338558741002224/8225441708"
+-->
