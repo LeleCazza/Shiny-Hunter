@@ -1,41 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <instant-run
     abi="x86"
-    api-level="29"
+    api-level="22"
     build-mode="COLD"
-    density="420dpi"
+    density="hdpi"
     format="10"
-    ir-eligibility="METHOD_ADDED"
     plugin-version="3.3.2"
-    timestamp="1582826578775"
+    timestamp="1582888412893"
     token="2503709468702086300"
     verifier="COLD_SWAP_REQUESTED" >
 
     <task
         name="javac"
-        duration="273" />
+        duration="0" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="22" />
+        duration="0" />
     <task
         name="verifier"
-        duration="4" />
+        duration="0" />
 
     <artifact
-        location="C:\Users\Gabriele Alessandro\Documents\ShinyHunter\app\build\intermediates\split-apk\debug\slices\slice_8.apk"
-        type="SPLIT" />
+        location="C:\Users\Gabriele Alessandro\Documents\ShinyHunter\app\build\intermediates\instant-run-apk\debug\app-debug.apk"
+        type="SPLIT_MAIN" />
 
     <build
         build-mode="FULL"
-        ir-eligibility="FIELD_TYPE_CHANGE"
-        timestamp="1582815588153"
-        verifier="COLD_SWAP_REQUESTED" >
-        <artifact
-            location="C:\Users\Gabriele Alessandro\Documents\ShinyHunter\app\build\intermediates\resources\instant-run\debug\resources-debug.apk"
-            type="SPLIT" />
+        timestamp="1582888030452"
+        verifier="FULL_BUILD_REQUESTED" >
         <artifact
             location="C:\Users\Gabriele Alessandro\Documents\ShinyHunter\app\build\intermediates\split-apk\debug\dep\dependencies.apk"
             type="SPLIT" />
@@ -58,16 +53,16 @@
             location="C:\Users\Gabriele Alessandro\Documents\ShinyHunter\app\build\intermediates\split-apk\debug\slices\slice_1.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Users\Gabriele Alessandro\Documents\ShinyHunter\app\build\intermediates\split-apk\debug\slices\slice_4.apk"
-            type="SPLIT" />
-        <artifact
-            location="C:\Users\Gabriele Alessandro\Documents\ShinyHunter\app\build\intermediates\split-apk\debug\slices\slice_7.apk"
-            type="SPLIT" />
-        <artifact
             location="C:\Users\Gabriele Alessandro\Documents\ShinyHunter\app\build\intermediates\split-apk\debug\slices\slice_9.apk"
             type="SPLIT" />
         <artifact
+            location="C:\Users\Gabriele Alessandro\Documents\ShinyHunter\app\build\intermediates\split-apk\debug\slices\slice_4.apk"
+            type="SPLIT" />
+        <artifact
             location="C:\Users\Gabriele Alessandro\Documents\ShinyHunter\app\build\intermediates\split-apk\debug\slices\slice_8.apk"
+            type="SPLIT" />
+        <artifact
+            location="C:\Users\Gabriele Alessandro\Documents\ShinyHunter\app\build\intermediates\split-apk\debug\slices\slice_7.apk"
             type="SPLIT" />
         <artifact
             location="C:\Users\Gabriele Alessandro\Documents\ShinyHunter\app\build\intermediates\instant-run-apk\debug\app-debug.apk"
@@ -75,21 +70,11 @@
     </build>
     <build
         build-mode="COLD"
-        ir-eligibility="COMPATIBLE"
-        timestamp="1582825770821"
+        timestamp="1582888412893"
         verifier="COLD_SWAP_REQUESTED" >
         <artifact
-            location="C:\Users\Gabriele Alessandro\Documents\ShinyHunter\app\build\intermediates\resources\instant-run\debug\resources-debug.apk"
-            type="SPLIT" />
-    </build>
-    <build
-        build-mode="COLD"
-        ir-eligibility="METHOD_ADDED"
-        timestamp="1582826578775"
-        verifier="COLD_SWAP_REQUESTED" >
-        <artifact
-            location="C:\Users\Gabriele Alessandro\Documents\ShinyHunter\app\build\intermediates\split-apk\debug\slices\slice_8.apk"
-            type="SPLIT" />
+            location="C:\Users\Gabriele Alessandro\Documents\ShinyHunter\app\build\intermediates\instant-run-apk\debug\app-debug.apk"
+            type="SPLIT_MAIN" />
     </build>
 
 </instant-run>

@@ -6,6 +6,7 @@ import android.content.SharedPreferences
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import android.util.DisplayMetrics
+import android.util.Log
 import android.widget.TextView
 import com.google.android.gms.ads.AdRequest
 import com.google.android.gms.ads.AdView
@@ -81,15 +82,26 @@ open class MainActivity : AppCompatActivity() {
     private fun caricaListaPokemonShinyCatturati(pokemonDataCreator: PokemonDataCreator){
         val stringaDiSalvataggio = sharedPreferences.getString("LISTA_CATTURATI", null)
         listaTriplettePokemonCatturati = pokemonDataCreator.getListaPokemonCatturati()
+        for ((i,x) in listaTriplettePokemonCatturati.withIndex()){
+            Log.i("TRIPLETTA $i:", x[0].toString() + " , " + x[1].toString() + " , " + x[2].toString())
+        }
         if(stringaDiSalvataggio != null)
             caricaListaTriplettePokemonCatturati(stringaDiSalvataggio)
     }
 
     @SuppressLint("SetTextI18n")
     private fun caricaListaTriplettePokemonCatturati(stringaDiSalvataggio : String){
-        val triplette = stringaDiSalvataggio.split("|").iterator()
+        val triplette = stringaDiSalvataggio.split("|")
         var numeroShinyCatturati = 0
-        for ((i,tripletta) in triplette.withIndex()){
+        var i = 0
+        for (tripletta in triplette){
+            if(primoUtilizzo(triplette) && isNuovaTripletta(i)){
+                Log.i("SGAMAAAATO", "SONO ENTRATO ERROREEE!")
+                listaTriplettePokemonCatturati[i][0] = 0
+                listaTriplettePokemonCatturati[i][1] = 0
+                listaTriplettePokemonCatturati[i][2] = 0
+                i++
+            }
             val pokemon = tripletta.split(";")
             listaTriplettePokemonCatturati[i][0] = pokemon[0].toInt()
             listaTriplettePokemonCatturati[i][1] = pokemon[1].toInt()
@@ -100,9 +112,20 @@ open class MainActivity : AppCompatActivity() {
                 numeroShinyCatturati++
             if(pokemon[2].toInt() == 1)
                 numeroShinyCatturati++
+            i++
         }
         aggiornaLabelDiPercentualeShinyCatturati(numeroShinyCatturati)
         aggiornaBarraDiPercentualeShinyCatturati(numeroShinyCatturati)
+    }
+
+    private fun isNuovaTripletta(posizioneTripletta : Int) : Boolean {
+        return  listaTriplettePokemonCatturati[posizioneTripletta][0] == -1 &&
+                listaTriplettePokemonCatturati[posizioneTripletta][1] == -1 &&
+                listaTriplettePokemonCatturati[posizioneTripletta][2] == -1
+    }
+
+    private fun primoUtilizzo(triplette : List<String>) : Boolean{
+        return triplette.size != listaTriplettePokemonCatturati.size
     }
 
     private fun caricaBanner(){
@@ -120,6 +143,9 @@ open class MainActivity : AppCompatActivity() {
         sharedPreferences.edit()
             .putString("LISTA_CATTURATI", listaTripletteToString(listaTriplettePokemonCatturati))
             .apply()
+        for ((i,x) in listaTriplettePokemonCatturati.withIndex()){
+            Log.i("TRIPLETTA $i:", x[0].toString() + " , " + x[1].toString() + " , " + x[2].toString())
+        }
     }
 
     private fun listaTripletteToString(listaTriplettePokemonCatturati : MutableList<MutableList<Int>>) : String{

@@ -2,7 +2,6 @@ package com.trezza.shinyhunter
 
 import android.app.Application
 import android.graphics.drawable.Drawable
-import android.util.Log
 import androidx.core.content.ContextCompat
 
 class PokemonDataCreator(private var listaNomiImmaginiPokemon : Array<String>, private var application: Application){
@@ -26,9 +25,11 @@ class PokemonDataCreator(private var listaNomiImmaginiPokemon : Array<String>, p
         val immagineVuota = creaImmagineVuota()
         var posizione = 0
         var posizionePokemonPrecedente = 0
+        var ultimoValorePrecedente = ""
+        var ultimoValore = ""
         for (pokemon in listaNomiImmaginiPokemon){
-            Log.i("POKEMON", pokemon)
             val posizionePokemon = pokemon.split("_")[1].toInt()
+            ultimoValore = pokemon.split("_")[2]
             if(posizione == 3){
                 aggiungiTriplettaAListaTriplette()
                 creaNuovaTripletta()
@@ -36,20 +37,22 @@ class PokemonDataCreator(private var listaNomiImmaginiPokemon : Array<String>, p
                 posizione = 0
             }
             if(posizionePokemonPrecedente < posizionePokemon){
-                aggiungiPokemonATripletta(pokemon)
+                aggiungiPokemonATripletta(pokemon,ultimoValore)
+                ultimoValorePrecedente = ultimoValore
                 posizionePokemonPrecedente = posizionePokemon
                 posizione++
             }
             else{
-                aggiungiImmaginiVuoteATripletta(immagineVuota, posizione)
+                aggiungiImmaginiVuoteATripletta(immagineVuota, posizione, ultimoValorePrecedente)
                 aggiungiTriplettaAListaTriplette()
                 creaNuovaTripletta()
-                aggiungiPokemonATripletta(pokemon)
+                aggiungiPokemonATripletta(pokemon, ultimoValore)
+                ultimoValorePrecedente = ultimoValore
                 posizionePokemonPrecedente = posizionePokemon
                 posizione = 1
             }
         }
-        concludiUltimaTripletta(immagineVuota,posizione)
+        concludiUltimaTripletta(immagineVuota,posizione, ultimoValore)
     }
 
     private fun creaImmagineVuota() : Drawable{
@@ -59,35 +62,41 @@ class PokemonDataCreator(private var listaNomiImmaginiPokemon : Array<String>, p
     }
 
     private fun aggiungiTriplettaAListaTriplette(){
-        Log.i("AGGIUNTA TRIPLETTA", "OK")
         listaTriplettePokemon.add(triplettaPokemon)
         listaTriplettePokemonCatturati.add(triplettaPokemonCatturati)
     }
 
     private fun creaNuovaTripletta(){
-        Log.i("CREATA TRIPLETTA", "OK")
         triplettaPokemon = mutableListOf()
         triplettaPokemonCatturati = mutableListOf()
     }
 
-    private fun aggiungiPokemonATripletta(file : String){
-        Log.i("AGGIUNTO POKEMON", "OK")
+    private fun aggiungiPokemonATripletta(file : String, ultimoValore: String){
         triplettaPokemon.add(Drawable.createFromStream(application.assets.open("pokemon/$file"),null))
-        triplettaPokemonCatturati.add(0)
+        if(isNuovoPokemon(ultimoValore))
+            triplettaPokemonCatturati.add(-1)
+        else
+            triplettaPokemonCatturati.add(0)
     }
 
-    private fun aggiungiImmaginiVuoteATripletta(immagineVuota : Drawable, posizione : Int){
+    private fun aggiungiImmaginiVuoteATripletta(immagineVuota : Drawable, posizione : Int, ultimoValore: String){
         repeat(3 - posizione){
-            Log.i("AGGIUNTA IMMAGINE VUOTA", "OK")
             triplettaPokemon.add(immagineVuota)
-            triplettaPokemonCatturati.add(0)
+            if(isNuovoPokemon(ultimoValore))
+                triplettaPokemonCatturati.add(-1)
+            else
+                triplettaPokemonCatturati.add(0)
         }
     }
 
-    private fun concludiUltimaTripletta(immagineVuota : Drawable, posizione : Int){
+    private fun concludiUltimaTripletta(immagineVuota : Drawable, posizione : Int, ultimoValore: String){
         if(triplettaPokemon.size < 3){
-            aggiungiImmaginiVuoteATripletta(immagineVuota,posizione)
+            aggiungiImmaginiVuoteATripletta(immagineVuota,posizione, ultimoValore)
             aggiungiTriplettaAListaTriplette()
         }
+    }
+
+    private fun isNuovoPokemon(ultimoValore : String) : Boolean{
+        return ultimoValore == "N.png"
     }
 }
