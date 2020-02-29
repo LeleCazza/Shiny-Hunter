@@ -607,6 +607,7 @@ color background_floating_material_dark
 color background_floating_material_light
 color background_material_dark
 color background_material_light
+color bordo
 color bright_foreground_disabled_material_dark
 color bright_foreground_disabled_material_light
 color bright_foreground_inverse_material_dark
@@ -697,6 +698,7 @@ color primary_text_default_material_dark
 color primary_text_default_material_light
 color primary_text_disabled_material_dark
 color primary_text_disabled_material_light
+color principale
 color ripple_material_dark
 color ripple_material_light
 color secondary_text_default_material_dark
@@ -1047,6 +1049,7 @@ drawable vuoto
 id ALT
 id CTRL
 id FUNCTION
+id LayoutBanner
 id META
 id SHIFT
 id SYM
@@ -1069,7 +1072,6 @@ id action_mode_close_button
 id action_text
 id actions
 id activity_chooser_view_content
-id adBanner
 id add
 id alertTitle
 id all

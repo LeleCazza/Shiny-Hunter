@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.*
 import com.daimajia.numberprogressbar.NumberProgressBar
+import com.trezza.shinyhunter.MainActivity.Companion.interstitialPubblicita
 import com.trezza.shinyhunter.MainActivity.Companion.listaTriplettePokemonCatturati
 import kotlinx.android.synthetic.main.adapter_pokemon.view.*
 
@@ -16,6 +17,8 @@ class Adapter(private var context: Context,
               private var barraDiPercentualeShinyCatturati : NumberProgressBar,
               private var labelDiPercentualeShinyCatturati : TextView,
               private var larghezzaDisplay: Int) : BaseAdapter() {
+
+    private var pubblicitaClickVeloceOnlyOne = true
 
     @SuppressLint("ViewHolder")
     override fun getView(posizioneTripletta: Int, convertView: View?, parent: ViewGroup?): View {
@@ -51,6 +54,7 @@ class Adapter(private var context: Context,
             if(!isShinyCatturato(posizioneTripletta,posizionePokemon) && !isPosizioneVuota(tripletta, posizionePokemon)){
                 incrementaShinyCatturati()
                 catturaShiny(pokemon,posizioneTripletta,posizionePokemon)
+                mostraInterstitialClickVeloce()
             }
         }
     }
@@ -60,9 +64,14 @@ class Adapter(private var context: Context,
             if(isShinyCatturato(posizioneTripletta,posizionePokemon)){
                 decrementaShinyCatturati()
                 liberaShiny(pokemon, posizioneTripletta, posizionePokemon)
+                mostraInterstitialClickLungo()
             }
             true
         }
+    }
+
+    private fun doppioClick(pokemon : ImageView){
+
     }
 
     @SuppressLint("SetTextI18n")
@@ -149,5 +158,18 @@ class Adapter(private var context: Context,
 
     override fun getCount(): Int{
         return listaTriplettePokemon.size
+    }
+
+    private fun mostraInterstitialClickVeloce(){
+        if(pubblicitaClickVeloceOnlyOne)
+            if (interstitialPubblicita.isLoaded) {
+                interstitialPubblicita.show()
+                pubblicitaClickVeloceOnlyOne = false
+            }
+    }
+
+    private fun mostraInterstitialClickLungo(){
+        if (interstitialPubblicita.isLoaded)
+            interstitialPubblicita.show()
     }
 }

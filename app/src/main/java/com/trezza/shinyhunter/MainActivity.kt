@@ -7,17 +7,17 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import android.util.DisplayMetrics
 import android.util.Log
+import android.widget.RelativeLayout
 import android.widget.TextView
-import com.google.android.gms.ads.AdRequest
-import com.google.android.gms.ads.AdView
 import kotlinx.android.synthetic.main.activity_main.*
-import com.google.android.gms.ads.MobileAds
 import com.daimajia.numberprogressbar.NumberProgressBar
+import com.google.android.gms.ads.*
 
 open class MainActivity : AppCompatActivity() {
 
     companion object{
         lateinit var listaTriplettePokemonCatturati : MutableList<MutableList<Int>>
+        lateinit var interstitialPubblicita: InterstitialAd
     }
 
     private var totaleNumeroDiPokemonShiny = 0
@@ -25,7 +25,6 @@ open class MainActivity : AppCompatActivity() {
     private lateinit var barraDiPercentualeShinyCatturati : NumberProgressBar
     private lateinit var labelDiPercentualeShinyCatturati : TextView
     private lateinit var sharedPreferences: SharedPreferences
-    private lateinit var bannerPubblicita : AdView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -33,6 +32,9 @@ open class MainActivity : AppCompatActivity() {
         supportActionBar?.hide()
         sharedPreferences = getPreferences(Context.MODE_PRIVATE)
         pokemonDataCreator = PokemonDataCreator(this.assets.list("pokemon")!!,this.application)
+        MobileAds.initialize(this){}
+        caricaBanner()
+        caricaInterstitial()
     }
 
     override fun onStart() {
@@ -40,7 +42,6 @@ open class MainActivity : AppCompatActivity() {
         inizializzaComponenti()
         caricaListaPokemonShinyCatturati(pokemonDataCreator)
         creaAdapter(pokemonDataCreator)
-        caricaBanner()
     }
 
     private fun inizializzaComponenti(){
@@ -129,9 +130,29 @@ open class MainActivity : AppCompatActivity() {
     }
 
     private fun caricaBanner(){
-        MobileAds.initialize(this){}
-        bannerPubblicita = findViewById(R.id.adBanner)
-        bannerPubblicita.loadAd(AdRequest.Builder().build())
+        val layoutBanner = findViewById<RelativeLayout>(R.id.LayoutBanner)
+        val adView = AdView(this)
+        adView.adSize = AdSize.BANNER
+        if (BuildConfig.DEBUG)
+            adView.adUnitId = "ca-app-pub-3940256099942544/6300978111"
+        else
+            adView.adUnitId = "ca-app-pub-4338558741002224/8225441708"
+        adView.loadAd(AdRequest.Builder().build())
+        layoutBanner.addView(adView)
+    }
+
+    private fun caricaInterstitial(){
+        interstitialPubblicita = InterstitialAd(this)
+        if (BuildConfig.DEBUG)
+            interstitialPubblicita.adUnitId = "ca-app-pub-3940256099942544/1033173712"
+        else
+            interstitialPubblicita.adUnitId = "ca-app-pub-4338558741002224/4574875265"
+        interstitialPubblicita.loadAd(AdRequest.Builder().build())
+        interstitialPubblicita.adListener = object : AdListener() {
+            override fun onAdClosed() {
+                interstitialPubblicita.loadAd(AdRequest.Builder().build())
+            }
+        }
     }
 
     override fun onPause() {

@@ -6,9 +6,9 @@
         android:layout_height="match_parent">
     <LinearLayout
             android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="1">
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
         <TextView
                 android:text="Shiny: "
                 android:layout_width="match_parent"
@@ -17,15 +17,21 @@
                 android:layout_weight="1"
                 android:textSize="20sp"
                 android:gravity="center"
-                android:textAlignment="center" android:textStyle="bold" android:textColor="@color/colorPrimaryDark"/>
+                android:textAlignment="center"
+                android:textStyle="bold"
+                android:textColor="@color/colorPrimaryDark"
+                android:background="@color/bordo"/>
         <com.daimajia.numberprogressbar.NumberProgressBar
                 android:id="@+id/progressBar"
                 style="@style/NumberProgressBar_Passing_Green"
                 android:layout_gravity="center_vertical"
                 android:scaleY="2"
                 android:layout_weight="1"
-                android:layout_height="match_parent" android:layout_width="match_parent" android:visibility="visible"
-                app:progress_text_color="@color/colorPrimaryDark"/>
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:visibility="visible"
+                app:progress_text_color="@color/colorPrimaryDark"
+                android:background="@color/bordo"/>
     </LinearLayout>
     <ListView
         xmlns:android="http://schemas.android.com/apk/res/android"
@@ -35,23 +41,13 @@
         android:layout_height="match_parent"
         tools:listitem="@android:layout/simple_list_item_1"
         android:layout_weight="0.2"
+        android:background="@color/principale"
     />
-    <com.google.android.gms.ads.AdView
-            xmlns:ads="http://schemas.android.com/apk/res-auto"
-            android:id="@+id/adBanner"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_margin="0dp"
-            ads:adSize="BANNER"
-            ads:adUnitId="ca-app-pub-3940256099942544/6300978111"
-            android:layout_weight="1"
-    >
-    </com.google.android.gms.ads.AdView>
+    <RelativeLayout android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:id="@+id/LayoutBanner"
+                    android:gravity="center"
+                    android:background="@color/bordo">
+    </RelativeLayout>
 </LinearLayout>
-
-<!---
-TEST:
-ads:adUnitId="ca-app-pub-3940256099942544/6300978111"
-RELEASE:
-ads:adUnitId="ca-app-pub-4338558741002224/8225441708"
--->

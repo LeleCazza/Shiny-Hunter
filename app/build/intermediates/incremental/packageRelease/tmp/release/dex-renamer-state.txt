@@ -1,4 +1,4 @@
-#Tue Feb 25 16:21:23 CET 2020
+#Fri Feb 28 12:47:00 CET 2020
 base.0=C\:\\Users\\Gabriele Alessandro\\Documents\\ShinyHunter\\app\\build\\intermediates\\dex\\release\\mergeDexRelease\\out
 path.0=classes.dex
 renamed.0=classes.dex
