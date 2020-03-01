@@ -4,7 +4,7 @@
             "outputFile": "C:\\Users\\Gabriele Alessandro\\Documents\\ShinyHunter\\app\\build\\intermediates\\incremental\\mergeReleaseResources\\merged.dir\\values-v25\\values-v25.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Gabriele Alessandro\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-1.0.0.aar\\9a06925faedcba99bc0b093da87cb59f\\res\\values-v25\\values-v25.xml",
+                    "source": "C:\\Users\\Gabriele Alessandro\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-1.1.0.aar\\19942238b68589f7cc0c24ec909f6a8e\\res\\values-v25\\values-v25.xml",
                     "from": {
                         "startLines": "2,3,4,6",
                         "startColumns": "4,4,4,4",

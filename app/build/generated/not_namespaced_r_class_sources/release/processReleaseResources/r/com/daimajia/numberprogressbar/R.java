@@ -12,40 +12,40 @@ public final class R {
     public static final class attr {
         private attr() {}
 
-        public static final int numberProgressBarStyle = 0x7f03016d;
-        public static final int progress_current = 0x7f030183;
-        public static final int progress_max = 0x7f030184;
-        public static final int progress_reached_bar_height = 0x7f030185;
-        public static final int progress_reached_color = 0x7f030186;
-        public static final int progress_text_color = 0x7f030187;
-        public static final int progress_text_offset = 0x7f030188;
-        public static final int progress_text_size = 0x7f030189;
-        public static final int progress_text_visibility = 0x7f03018a;
-        public static final int progress_unreached_bar_height = 0x7f03018b;
-        public static final int progress_unreached_color = 0x7f03018c;
+        public static final int numberProgressBarStyle = 0x7f03017a;
+        public static final int progress_current = 0x7f030190;
+        public static final int progress_max = 0x7f030191;
+        public static final int progress_reached_bar_height = 0x7f030192;
+        public static final int progress_reached_color = 0x7f030193;
+        public static final int progress_text_color = 0x7f030194;
+        public static final int progress_text_offset = 0x7f030195;
+        public static final int progress_text_size = 0x7f030196;
+        public static final int progress_text_visibility = 0x7f030197;
+        public static final int progress_unreached_bar_height = 0x7f030198;
+        public static final int progress_unreached_color = 0x7f030199;
     }
     public static final class id {
         private id() {}
 
-        public static final int invisible = 0x7f08005e;
-        public static final int visible = 0x7f0800ce;
+        public static final int invisible = 0x7f080083;
+        public static final int visible = 0x7f0800fb;
     }
     public static final class style {
         private style() {}
 
-        public static final int NumberProgressBar_Beauty_Red = 0x7f0e00c6;
-        public static final int NumberProgressBar_Default = 0x7f0e00c7;
-        public static final int NumberProgressBar_Funny_Orange = 0x7f0e00c8;
-        public static final int NumberProgressBar_Grace_Yellow = 0x7f0e00c9;
-        public static final int NumberProgressBar_Passing_Green = 0x7f0e00ca;
-        public static final int NumberProgressBar_Relax_Blue = 0x7f0e00cb;
-        public static final int NumberProgressBar_Twinkle_Night = 0x7f0e00cc;
-        public static final int NumberProgressBar_Warning_Red = 0x7f0e00cd;
+        public static final int NumberProgressBar_Beauty_Red = 0x7f0f00c7;
+        public static final int NumberProgressBar_Default = 0x7f0f00c8;
+        public static final int NumberProgressBar_Funny_Orange = 0x7f0f00c9;
+        public static final int NumberProgressBar_Grace_Yellow = 0x7f0f00ca;
+        public static final int NumberProgressBar_Passing_Green = 0x7f0f00cb;
+        public static final int NumberProgressBar_Relax_Blue = 0x7f0f00cc;
+        public static final int NumberProgressBar_Twinkle_Night = 0x7f0f00cd;
+        public static final int NumberProgressBar_Warning_Red = 0x7f0f00ce;
     }
     public static final class styleable {
         private styleable() {}
 
-        public static final int[] NumberProgressBar = { 0x7f030183, 0x7f030184, 0x7f030185, 0x7f030186, 0x7f030187, 0x7f030188, 0x7f030189, 0x7f03018a, 0x7f03018b, 0x7f03018c };
+        public static final int[] NumberProgressBar = { 0x7f030190, 0x7f030191, 0x7f030192, 0x7f030193, 0x7f030194, 0x7f030195, 0x7f030196, 0x7f030197, 0x7f030198, 0x7f030199 };
         public static final int NumberProgressBar_progress_current = 0;
         public static final int NumberProgressBar_progress_max = 1;
         public static final int NumberProgressBar_progress_reached_bar_height = 2;
@@ -56,7 +56,7 @@ public final class R {
         public static final int NumberProgressBar_progress_text_visibility = 7;
         public static final int NumberProgressBar_progress_unreached_bar_height = 8;
         public static final int NumberProgressBar_progress_unreached_color = 9;
-        public static final int[] Themes = { 0x7f03016d };
+        public static final int[] Themes = { 0x7f03017a };
         public static final int Themes_numberProgressBarStyle = 0;
     }
 }
