@@ -9,11 +9,11 @@ import android.view.ViewGroup
 import android.widget.*
 import kotlinx.android.synthetic.main.adapter_pokemon.view.*
 
-class AdapterCriterio(private var context: Context,
-                      private var listaTriplettePokemon : List<List<Drawable>>,
-                      private var larghezzaDisplay: Int,
-                      private var mostraSoloShinyCatturati : Boolean,
-                      private var mostraSoloShinyMancanti: Boolean) : BaseAdapter() {
+class AdapterShiny(private var context: Context,
+                   private var listaTriplettePokemon : List<List<Drawable>>,
+                   private var larghezzaDisplay: Int,
+                   private var mostraSoloShinyCatturati : Boolean,
+                   private var mostraSoloShinyMancanti: Boolean) : BaseAdapter() {
 
     @SuppressLint("ViewHolder")
     override fun getView(posizioneTripletta: Int, convertView: View?, parent: ViewGroup?): View {

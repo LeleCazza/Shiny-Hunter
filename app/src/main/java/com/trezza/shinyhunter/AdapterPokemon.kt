@@ -12,11 +12,11 @@ import com.trezza.shinyhunter.MainActivity.Companion.interstitialPubblicita
 import com.trezza.shinyhunter.MainActivity.Companion.listaTriplettePokemonCatturati
 import kotlinx.android.synthetic.main.adapter_pokemon.view.*
 
-class Adapter(private var context: Context,
-              private var listaTriplettePokemon : List<List<Drawable>>,
-              private var barraDiPercentualeShinyCatturati : NumberProgressBar,
-              private var labelDiPercentualeShinyCatturati : TextView,
-              private var larghezzaDisplay: Int) : BaseAdapter() {
+class AdapterPokemon(private var context: Context,
+                     private var listaTriplettePokemon : List<List<Drawable>>,
+                     private var barraDiPercentualeShinyCatturati : NumberProgressBar,
+                     private var labelDiPercentualeShinyCatturati : TextView,
+                     private var larghezzaDisplay: Int) : BaseAdapter() {
 
     private var pubblicitaClickVeloceOnlyOne = true
 
