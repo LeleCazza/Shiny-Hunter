@@ -1,4 +1,4 @@
-#Sat Feb 29 12:24:07 CET 2020
+#Sun Mar 01 17:01:05 CET 2020
 base.0=C\:\\Users\\Gabriele Alessandro\\Documents\\ShinyHunter\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\1
 path.0=classes.dex
 renamed.0=classes.dex

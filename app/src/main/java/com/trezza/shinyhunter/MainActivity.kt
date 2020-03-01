@@ -3,21 +3,27 @@ package com.trezza.shinyhunter
 import android.annotation.SuppressLint
 import android.content.Context
 import android.content.SharedPreferences
+import android.graphics.drawable.Drawable
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import android.util.DisplayMetrics
-import android.util.Log
+import android.view.Menu
+import android.view.MenuItem
 import android.widget.RelativeLayout
 import android.widget.TextView
+import androidx.core.content.ContextCompat
 import kotlinx.android.synthetic.main.activity_main.*
 import com.daimajia.numberprogressbar.NumberProgressBar
 import com.google.android.gms.ads.*
 
+@Suppress("UNREACHABLE_CODE")
 open class MainActivity : AppCompatActivity() {
 
     companion object{
         lateinit var listaTriplettePokemonCatturati : MutableList<MutableList<Int>>
         lateinit var interstitialPubblicita: InterstitialAd
+        private var mostraSoloShinyCatturati = true
+        private var mostraSoloShinyMancanti = true
     }
 
     private var totaleNumeroDiPokemonShiny = 0
@@ -29,7 +35,6 @@ open class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        supportActionBar?.hide()
         sharedPreferences = getPreferences(Context.MODE_PRIVATE)
         pokemonDataCreator = PokemonDataCreator(this.assets.list("pokemon")!!,this.application)
         MobileAds.initialize(this){}
@@ -41,7 +46,7 @@ open class MainActivity : AppCompatActivity() {
         super.onStart()
         inizializzaComponenti()
         caricaListaPokemonShinyCatturati(pokemonDataCreator)
-        creaAdapter(pokemonDataCreator)
+        creaAdapter()
     }
 
     private fun inizializzaComponenti(){
@@ -62,7 +67,7 @@ open class MainActivity : AppCompatActivity() {
         barraDiPercentualeShinyCatturati.progress = shinyCatturati
     }
 
-    private fun creaAdapter(pokemonDataCreator : PokemonDataCreator){
+    private fun creaAdapter(){
         listView.apply {
             adapter = Adapter(
                 context,
@@ -83,9 +88,6 @@ open class MainActivity : AppCompatActivity() {
     private fun caricaListaPokemonShinyCatturati(pokemonDataCreator: PokemonDataCreator){
         val stringaDiSalvataggio = sharedPreferences.getString("LISTA_CATTURATI", null)
         listaTriplettePokemonCatturati = pokemonDataCreator.getListaPokemonCatturati()
-        for ((i,x) in listaTriplettePokemonCatturati.withIndex()){
-            Log.i("TRIPLETTA $i:", x[0].toString() + " , " + x[1].toString() + " , " + x[2].toString())
-        }
         if(stringaDiSalvataggio != null)
             caricaListaTriplettePokemonCatturati(stringaDiSalvataggio)
     }
@@ -97,7 +99,6 @@ open class MainActivity : AppCompatActivity() {
         var i = 0
         for (tripletta in triplette){
             if(primoUtilizzo(triplette) && isNuovaTripletta(i)){
-                Log.i("SGAMAAAATO", "SONO ENTRATO ERROREEE!")
                 listaTriplettePokemonCatturati[i][0] = 0
                 listaTriplettePokemonCatturati[i][1] = 0
                 listaTriplettePokemonCatturati[i][2] = 0
@@ -164,9 +165,6 @@ open class MainActivity : AppCompatActivity() {
         sharedPreferences.edit()
             .putString("LISTA_CATTURATI", listaTripletteToString(listaTriplettePokemonCatturati))
             .apply()
-        for ((i,x) in listaTriplettePokemonCatturati.withIndex()){
-            Log.i("TRIPLETTA $i:", x[0].toString() + " , " + x[1].toString() + " , " + x[2].toString())
-        }
     }
 
     private fun listaTripletteToString(listaTriplettePokemonCatturati : MutableList<MutableList<Int>>) : String{
@@ -179,5 +177,195 @@ open class MainActivity : AppCompatActivity() {
         }
         stringaDiSalvataggio = stringaDiSalvataggio.substringBeforeLast("|")
         return stringaDiSalvataggio
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.menu, menu)
+        val sm = menu?.findItem(R.id.ShinyMancanti)
+        val sc = menu?.findItem(R.id.ShinyCatturati)
+        sm?.setOnMenuItemClickListener {
+            if(mostraSoloShinyMancanti){
+                mostraSoloShinyMancanti()
+                sm.icon = ContextCompat.getDrawable(application.baseContext,R.drawable.shiny_mancanti_selezionato)!!
+                sc?.icon = ContextCompat.getDrawable(application.baseContext,R.drawable.shiny_catturati)!!
+                mostraSoloShinyMancanti = false
+                mostraSoloShinyCatturati = true
+            }
+            else{
+                creaAdapter()
+                sc?.icon = ContextCompat.getDrawable(application.baseContext,R.drawable.shiny_catturati)!!
+                sm.icon = ContextCompat.getDrawable(application.baseContext,R.drawable.shiny_mancanti)!!
+                mostraSoloShinyCatturati = true
+                mostraSoloShinyMancanti = true
+            }
+            onOptionsItemSelected(sm)
+            true
+        }
+        sc?.setOnMenuItemClickListener {
+            if(mostraSoloShinyCatturati){
+                mostraSoloShinyMancanti = false
+                mostraSoloShinyCatturati()
+                sc.icon = ContextCompat.getDrawable(application.baseContext,R.drawable.shiny_catturati_selezionato)!!
+                sm?.icon = ContextCompat.getDrawable(application.baseContext,R.drawable.shiny_mancanti)!!
+                mostraSoloShinyCatturati = false
+                mostraSoloShinyMancanti = true
+            }
+            else{
+                creaAdapter()
+                sc.icon = ContextCompat.getDrawable(application.baseContext,R.drawable.shiny_catturati)!!
+                sm?.icon = ContextCompat.getDrawable(application.baseContext,R.drawable.shiny_mancanti)!!
+                mostraSoloShinyCatturati = true
+                mostraSoloShinyMancanti = true
+            }
+            onOptionsItemSelected(sc)
+            true
+        }
+        return true
+    }
+
+    private fun mostraSoloShinyCatturati(){
+        val listaSoloShinyCatturati: MutableList<MutableList<Drawable>> = mutableListOf()
+        var triplettaShiny: MutableList<Drawable> = mutableListOf()
+        var posizione = 0
+        for((i,tripletta) in listaTriplettePokemonCatturati.withIndex()){
+            if(tripletta[0] == 1 || tripletta[1] == 1 || tripletta[2] == 1){
+                if(posizione == 3){
+                    listaSoloShinyCatturati.add(triplettaShiny)
+                    triplettaShiny = mutableListOf()
+                    posizione = 0
+                }
+                if(posizione < 3){
+                    if(tripletta[0] == 1){
+                        triplettaShiny.add(pokemonDataCreator.getPokemonDrawable(i,0))
+                        posizione++
+                    }
+                }
+                else{
+                    listaSoloShinyCatturati.add(triplettaShiny)
+                    triplettaShiny = mutableListOf()
+                    posizione = 0
+                    if(tripletta[0] == 1){
+                        triplettaShiny.add(pokemonDataCreator.getPokemonDrawable(i,0))
+                        posizione = 1
+                    }
+                }
+                if(posizione < 3){
+                    if(tripletta[1] == 1){
+                        triplettaShiny.add(pokemonDataCreator.getPokemonDrawable(i,1))
+                        posizione++
+                    }
+                }
+                else{
+                    listaSoloShinyCatturati.add(triplettaShiny)
+                    triplettaShiny = mutableListOf()
+                    posizione = 0
+                    if(tripletta[1] == 1) {
+                        triplettaShiny.add(pokemonDataCreator.getPokemonDrawable(i, 1))
+                        posizione = 1
+                    }
+                }
+                if(posizione < 3){
+                    if(tripletta[2] == 1) {
+                        triplettaShiny.add(pokemonDataCreator.getPokemonDrawable(i, 2))
+                        posizione++
+                    }
+                }
+                else{
+                    listaSoloShinyCatturati.add(triplettaShiny)
+                    triplettaShiny = mutableListOf()
+                    posizione = 0
+                    if(tripletta[2] == 1){
+                        triplettaShiny.add(pokemonDataCreator.getPokemonDrawable(i,2))
+                        posizione = 1
+                    }
+                }
+            }
+        }
+        repeat(3 - posizione){
+            triplettaShiny.add(pokemonDataCreator.creaImmagineVuota())
+        }
+        listaSoloShinyCatturati.add(triplettaShiny)
+        listView.apply {
+            adapter = AdapterCriterio(
+                context,
+                listaSoloShinyCatturati,
+                getLarghezzaDisplay(),
+                mostraSoloShinyCatturati,
+                mostraSoloShinyMancanti
+            )
+        }
+    }
+
+    private fun mostraSoloShinyMancanti(){
+        val listaSoloShinyCatturati: MutableList<MutableList<Drawable>> = mutableListOf()
+        var triplettaShiny: MutableList<Drawable> = mutableListOf()
+        var posizione = 0
+        for((i,tripletta) in listaTriplettePokemonCatturati.withIndex()){
+            if(tripletta[0] == 0 || tripletta[1] == 0 || tripletta[2] == 0){
+                if(posizione == 3){
+                    listaSoloShinyCatturati.add(triplettaShiny)
+                    triplettaShiny = mutableListOf()
+                    posizione = 0
+                }
+                if(posizione < 3){
+                    if(tripletta[0] == 0 && pokemonDataCreator.getPokemonDrawable(i,0).alpha != 0){
+                        triplettaShiny.add(pokemonDataCreator.getPokemonDrawable(i,0))
+                        posizione++
+                    }
+                }
+                else{
+                    listaSoloShinyCatturati.add(triplettaShiny)
+                    triplettaShiny = mutableListOf()
+                    posizione = 0
+                    if(tripletta[0] == 0 && pokemonDataCreator.getPokemonDrawable(i,0).alpha != 0){
+                        triplettaShiny.add(pokemonDataCreator.getPokemonDrawable(i,0))
+                        posizione = 1
+                    }
+                }
+                if(posizione < 3){
+                    if(tripletta[1] == 0 && pokemonDataCreator.getPokemonDrawable(i,1).alpha != 0){
+                        triplettaShiny.add(pokemonDataCreator.getPokemonDrawable(i,1))
+                        posizione++
+                    }
+                }
+                else{
+                    listaSoloShinyCatturati.add(triplettaShiny)
+                    triplettaShiny = mutableListOf()
+                    posizione = 0
+                    if(tripletta[1] == 0 && pokemonDataCreator.getPokemonDrawable(i,1).alpha != 0) {
+                        triplettaShiny.add(pokemonDataCreator.getPokemonDrawable(i, 1))
+                        posizione = 1
+                    }
+                }
+                if(posizione < 3){
+                    if(tripletta[2] == 0 && pokemonDataCreator.getPokemonDrawable(i,2).alpha != 0) {
+                        triplettaShiny.add(pokemonDataCreator.getPokemonDrawable(i, 2))
+                        posizione++
+                    }
+                }
+                else{
+                    listaSoloShinyCatturati.add(triplettaShiny)
+                    triplettaShiny = mutableListOf()
+                    posizione = 0
+                    if(tripletta[2] == 0 && pokemonDataCreator.getPokemonDrawable(i,2).alpha != 0){
+                        triplettaShiny.add(pokemonDataCreator.getPokemonDrawable(i,2))
+                        posizione = 1
+                    }
+                }
+            }
+        }
+        repeat(3 - posizione){
+            triplettaShiny.add(pokemonDataCreator.creaImmagineVuota())
+        }
+        listaSoloShinyCatturati.add(triplettaShiny)
+        listView.apply {
+            adapter = AdapterCriterio(
+                context,
+                listaSoloShinyCatturati,
+                getLarghezzaDisplay(),
+                mostraSoloShinyCatturati,
+                mostraSoloShinyMancanti
+            )
+        }
     }
 }

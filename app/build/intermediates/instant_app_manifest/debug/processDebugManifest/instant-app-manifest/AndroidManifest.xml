@@ -2,8 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.trezza.shinyhunter"
     android:targetSandboxVersion="2"
-    android:versionCode="11"
-    android:versionName="2.1.1" >
+    android:versionCode="12"
+    android:versionName="2.1.2" >
 
     <uses-sdk
         android:minSdkVersion="19"
@@ -22,14 +22,12 @@
         android:screenOrientation="portrait"
         android:supportsRtl="true"
         android:testOnly="true"
-        android:theme="@style/AppTheme" >
+        android:theme="@style/Theme.AppCompat.Light.DarkActionBar" >
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
             android:value="ca-app-pub-4338558741002224~9116159381" />
 
-        <activity
-            android:name="com.trezza.shinyhunter.MainActivity"
-            android:theme="@style/AppTheme" >
+        <activity android:name="com.trezza.shinyhunter.MainActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

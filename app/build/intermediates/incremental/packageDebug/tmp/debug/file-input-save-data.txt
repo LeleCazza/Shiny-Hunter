@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Fri Feb 28 12:48:50 CET 2020
+#Sun Mar 01 17:01:05 CET 2020
 38.path=SCINI CHE NON CI SONO/pokemon_icon_530_00_shiny.png
 429.baseType=DIRECTORY
 100.set=ASSET

@@ -21,6 +21,10 @@ class PokemonDataCreator(private var listaNomiImmaginiPokemon : Array<String>, p
         return listaTriplettePokemonCatturati
     }
 
+    fun getPokemonDrawable(posizioneTripletta: Int, posizionePokemon: Int) : Drawable{
+        return listaTriplettePokemon[posizioneTripletta][posizionePokemon]
+    }
+
     private fun creaDatiPokemon(){
         val immagineVuota = creaImmagineVuota()
         var posizione = 0
@@ -55,7 +59,7 @@ class PokemonDataCreator(private var listaNomiImmaginiPokemon : Array<String>, p
         concludiUltimaTripletta(immagineVuota,posizione, ultimoValore)
     }
 
-    private fun creaImmagineVuota() : Drawable{
+    fun creaImmagineVuota() : Drawable{
         val immagineVuota = ContextCompat.getDrawable(application.baseContext,R.drawable.vuoto)!!
         immagineVuota.alpha = 0
         return immagineVuota

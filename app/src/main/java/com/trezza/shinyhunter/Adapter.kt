@@ -70,10 +70,6 @@ class Adapter(private var context: Context,
         }
     }
 
-    private fun doppioClick(pokemon : ImageView){
-
-    }
-
     @SuppressLint("SetTextI18n")
     private fun incrementaShinyCatturati(){
         val shinyCatturati = ++barraDiPercentualeShinyCatturati.progress
