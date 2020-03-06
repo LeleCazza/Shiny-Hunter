@@ -10,7 +10,6 @@ import android.view.Menu
 import android.view.MenuItem
 import android.widget.RelativeLayout
 import android.widget.TextView
-import androidx.core.content.ContextCompat
 import kotlinx.android.synthetic.main.activity_main.*
 import com.daimajia.numberprogressbar.NumberProgressBar
 import com.google.android.gms.ads.*
@@ -21,6 +20,7 @@ open class MainActivity : AppCompatActivity() {
     companion object{
         lateinit var listaTriplettePokemonCatturati : MutableList<MutableList<Int>>
         lateinit var interstitialPubblicita: InterstitialAd
+        var pubblicitaClickVeloceOnlyOne = true
     }
 
     private var totaleNumeroDiPokemonShiny = 0
@@ -153,8 +153,8 @@ open class MainActivity : AppCompatActivity() {
     private fun impostaIconaShinyCatturati(iconaCatturati : MenuItem, iconaMancanti : MenuItem){
         mostraSoloShinyCatturati = false
         mostraSoloShinyMancanti()
-        iconaMancanti.icon = ContextCompat.getDrawable(application.baseContext,R.drawable.shiny_mancanti_selezionato)!!
-        iconaCatturati.icon = ContextCompat.getDrawable(application.baseContext,R.drawable.shiny_catturati)!!
+        iconaMancanti.icon = getDrawable(R.drawable.shiny_mancanti_selezionato)!!
+        iconaCatturati.icon = getDrawable(R.drawable.shiny_catturati)!!
         mostraSoloShinyCatturati = true
         mostraSoloShinyMancanti = false
     }
@@ -162,16 +162,16 @@ open class MainActivity : AppCompatActivity() {
     private fun impostaIconaShinyMancanti(iconaCatturati : MenuItem, iconaMancanti : MenuItem){
         mostraSoloShinyMancanti = false
         mostraSoloShinyCatturati()
-        iconaCatturati.icon = ContextCompat.getDrawable(application.baseContext,R.drawable.shiny_catturati_selezionato)!!
-        iconaMancanti.icon = ContextCompat.getDrawable(application.baseContext,R.drawable.shiny_mancanti)!!
+        iconaCatturati.icon = getDrawable(R.drawable.shiny_catturati_selezionato)!!
+        iconaMancanti.icon = getDrawable(R.drawable.shiny_mancanti)!!
         mostraSoloShinyCatturati = false
         mostraSoloShinyMancanti = true
     }
 
     private fun resettaIconeMenu(iconaCatturati : MenuItem, iconaMancanti : MenuItem){
         creaAdapter()
-        iconaCatturati.icon = ContextCompat.getDrawable(application.baseContext,R.drawable.shiny_catturati)!!
-        iconaMancanti.icon = ContextCompat.getDrawable(application.baseContext,R.drawable.shiny_mancanti)!!
+        iconaCatturati.icon = getDrawable(R.drawable.shiny_catturati)!!
+        iconaMancanti.icon = getDrawable(R.drawable.shiny_mancanti)!!
         mostraSoloShinyCatturati = true
         mostraSoloShinyMancanti = true
     }

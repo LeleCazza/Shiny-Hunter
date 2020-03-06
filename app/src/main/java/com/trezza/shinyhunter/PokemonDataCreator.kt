@@ -76,11 +76,20 @@ class PokemonDataCreator(private var listaNomiImmaginiPokemon : Array<String>, p
     }
 
     private fun aggiungiPokemonATripletta(file : String, ultimoValore: String){
-        triplettaPokemon.add(Drawable.createFromStream(application.assets.open("pokemon/$file"),null))
-        if(isNuovoPokemon(ultimoValore))
-            triplettaPokemonCatturati.add(-1)
-        else
-            triplettaPokemonCatturati.add(0)
+        var tentativo = 0
+        while(tentativo < 4){
+            try {
+                triplettaPokemon.add(Drawable.createFromStream(application.assets.open("pokemon/$file"),null))
+                if(isNuovoPokemon(ultimoValore))
+                    triplettaPokemonCatturati.add(-1)
+                else
+                    triplettaPokemonCatturati.add(0)
+                tentativo = 4
+            }
+            catch (e : Exception){
+                tentativo++
+            }
+        }
     }
 
     private fun aggiungiImmaginiVuoteATripletta(immagineVuota : Drawable, posizione : Int, ultimoValore: String){

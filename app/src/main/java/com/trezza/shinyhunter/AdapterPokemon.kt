@@ -10,6 +10,7 @@ import android.widget.*
 import com.daimajia.numberprogressbar.NumberProgressBar
 import com.trezza.shinyhunter.MainActivity.Companion.interstitialPubblicita
 import com.trezza.shinyhunter.MainActivity.Companion.listaTriplettePokemonCatturati
+import com.trezza.shinyhunter.MainActivity.Companion.pubblicitaClickVeloceOnlyOne
 import kotlinx.android.synthetic.main.adapter_pokemon.view.*
 
 class AdapterPokemon(private var context: Context,
@@ -17,8 +18,6 @@ class AdapterPokemon(private var context: Context,
                      private var barraDiPercentualeShinyCatturati : NumberProgressBar,
                      private var labelDiPercentualeShinyCatturati : TextView,
                      private var larghezzaDisplay: Int) : BaseAdapter() {
-
-    private var pubblicitaClickVeloceOnlyOne = true
 
     @SuppressLint("ViewHolder")
     override fun getView(posizioneTripletta: Int, convertView: View?, parent: ViewGroup?): View {

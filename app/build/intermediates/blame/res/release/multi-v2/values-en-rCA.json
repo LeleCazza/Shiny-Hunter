@@ -4,7 +4,7 @@
             "outputFile": "C:\\Users\\Gabriele Alessandro\\Documents\\ShinyHunter\\app\\build\\intermediates\\incremental\\mergeReleaseResources\\merged.dir\\values-en-rCA\\values-en-rCA.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Gabriele Alessandro\\.gradle\\caches\\transforms-1\\files-1.1\\core-1.1.0.aar\\9c1e47d37f34c914a7d7936d25cd80e2\\res\\values-en-rCA\\values-en-rCA.xml",
+                    "source": "C:\\Users\\Gabriele Alessandro\\.gradle\\caches\\transforms-1\\files-1.1\\core-1.1.0.aar\\3d252b2561ceda020732ecb021a6065d\\res\\values-en-rCA\\values-en-rCA.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -21,7 +21,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Gabriele Alessandro\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-1.1.0.aar\\19942238b68589f7cc0c24ec909f6a8e\\res\\values-en-rCA\\values-en-rCA.xml",
+                    "source": "C:\\Users\\Gabriele Alessandro\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-1.1.0.aar\\a78951d1fbfcc2077e72026b8bdb57da\\res\\values-en-rCA\\values-en-rCA.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",

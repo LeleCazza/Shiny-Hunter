@@ -4,7 +4,7 @@
             "outputFile": "C:\\Users\\Gabriele Alessandro\\Documents\\ShinyHunter\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v23\\values-v23.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Gabriele Alessandro\\.gradle\\caches\\transforms-1\\files-1.1\\cardview-1.0.0.aar\\70a7706f1b4eb8be9584d876d9657c1a\\res\\values-v23\\values-v23.xml",
+                    "source": "C:\\Users\\Gabriele Alessandro\\.gradle\\caches\\transforms-1\\files-1.1\\cardview-1.0.0.aar\\4777049da4a8a305aa62a91986aed2c2\\res\\values-v23\\values-v23.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -23,7 +23,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Gabriele Alessandro\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-1.1.0.aar\\19942238b68589f7cc0c24ec909f6a8e\\res\\values-v23\\values-v23.xml",
+                    "source": "C:\\Users\\Gabriele Alessandro\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-1.1.0.aar\\a78951d1fbfcc2077e72026b8bdb57da\\res\\values-v23\\values-v23.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,20,34,35,36,37,41,42,43,44",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4",

@@ -12,23 +12,23 @@ public final class R {
     public static final class attr {
         private attr() {}
 
-        public static final int numberProgressBarStyle = 0x7f03017a;
-        public static final int progress_current = 0x7f030190;
-        public static final int progress_max = 0x7f030191;
-        public static final int progress_reached_bar_height = 0x7f030192;
-        public static final int progress_reached_color = 0x7f030193;
-        public static final int progress_text_color = 0x7f030194;
-        public static final int progress_text_offset = 0x7f030195;
-        public static final int progress_text_size = 0x7f030196;
-        public static final int progress_text_visibility = 0x7f030197;
-        public static final int progress_unreached_bar_height = 0x7f030198;
-        public static final int progress_unreached_color = 0x7f030199;
+        public static final int numberProgressBarStyle = 0x7f03017f;
+        public static final int progress_current = 0x7f030195;
+        public static final int progress_max = 0x7f030196;
+        public static final int progress_reached_bar_height = 0x7f030197;
+        public static final int progress_reached_color = 0x7f030198;
+        public static final int progress_text_color = 0x7f030199;
+        public static final int progress_text_offset = 0x7f03019a;
+        public static final int progress_text_size = 0x7f03019b;
+        public static final int progress_text_visibility = 0x7f03019c;
+        public static final int progress_unreached_bar_height = 0x7f03019d;
+        public static final int progress_unreached_color = 0x7f03019e;
     }
     public static final class id {
         private id() {}
 
-        public static final int invisible = 0x7f080083;
-        public static final int visible = 0x7f0800fb;
+        public static final int invisible = 0x7f080087;
+        public static final int visible = 0x7f080100;
     }
     public static final class style {
         private style() {}
@@ -45,7 +45,7 @@ public final class R {
     public static final class styleable {
         private styleable() {}
 
-        public static final int[] NumberProgressBar = { 0x7f030190, 0x7f030191, 0x7f030192, 0x7f030193, 0x7f030194, 0x7f030195, 0x7f030196, 0x7f030197, 0x7f030198, 0x7f030199 };
+        public static final int[] NumberProgressBar = { 0x7f030195, 0x7f030196, 0x7f030197, 0x7f030198, 0x7f030199, 0x7f03019a, 0x7f03019b, 0x7f03019c, 0x7f03019d, 0x7f03019e };
         public static final int NumberProgressBar_progress_current = 0;
         public static final int NumberProgressBar_progress_max = 1;
         public static final int NumberProgressBar_progress_reached_bar_height = 2;
@@ -56,7 +56,7 @@ public final class R {
         public static final int NumberProgressBar_progress_text_visibility = 7;
         public static final int NumberProgressBar_progress_unreached_bar_height = 8;
         public static final int NumberProgressBar_progress_unreached_color = 9;
-        public static final int[] Themes = { 0x7f03017a };
+        public static final int[] Themes = { 0x7f03017f };
         public static final int Themes_numberProgressBarStyle = 0;
     }
 }

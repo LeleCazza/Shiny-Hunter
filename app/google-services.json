@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "76579789245",
+    "firebase_url": "https://shiny-hunter.firebaseio.com",
+    "project_id": "shiny-hunter",
+    "storage_bucket": "shiny-hunter.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:76579789245:android:401193571064bc03e69ad4",
+        "android_client_info": {
+          "package_name": "com.trezza.shinyhunter"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "76579789245-s5nflh7v96g7am5f5e3ks34fl7hqhafh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDW3U87btroqqSnnDzp82ESj2taYCA6tUI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "76579789245-s5nflh7v96g7am5f5e3ks34fl7hqhafh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
