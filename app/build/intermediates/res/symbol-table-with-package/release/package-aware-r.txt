@@ -1104,6 +1104,7 @@ drawable ic_launcher_foreground
 drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
+drawable istruzioni
 drawable mtrl_snackbar_background
 drawable mtrl_tabs_default_indicator
 drawable navigation_empty_icon
@@ -1129,6 +1130,7 @@ drawable vuoto
 id ALT
 id CTRL
 id FUNCTION
+id Istruzioni
 id LayoutBanner
 id META
 id SHIFT
@@ -1257,21 +1259,18 @@ id icon_group
 id icon_only
 id ifRoom
 id image
-id immaginePokemon1
-id immaginePokemon2
-id immaginePokemon3
 id info
 id invisible
 id italic
 id item_touch_helper_previous_elevation
 id labeled
 id largeLabel
+id layout
 id left
 id light
 id line1
 id line3
 id listMode
-id listView
 id list_item
 id masked
 id message
@@ -1443,7 +1442,6 @@ layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_main
-layout adapter_pokemon
 layout browser_actions_context_menu_page
 layout browser_actions_context_menu_row
 layout custom_dialog

@@ -1,52 +1,38 @@
 package com.trezza.shinyhunter
 
-import android.annotation.SuppressLint
 import android.content.Context
 import android.content.SharedPreferences
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import android.util.DisplayMetrics
+import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
+import android.widget.LinearLayout
 import android.widget.RelativeLayout
 import android.widget.TextView
-import androidx.fragment.app.FragmentManager
-import kotlinx.android.synthetic.main.activity_main.*
 import com.daimajia.numberprogressbar.NumberProgressBar
 import com.google.android.gms.ads.*
 
-@Suppress("UNREACHABLE_CODE")
 open class MainActivity : AppCompatActivity() {
 
     companion object{
-        lateinit var listaTriplettePokemonCatturati : MutableList<MutableList<Int>>
-        lateinit var interstitialPubblicita: InterstitialAd
+        lateinit var barraDiPercentualeShinyCatturati : NumberProgressBar
         var pubblicitaClickVeloceOnlyOne = true
+        lateinit var labelDiPercentualeShinyCatturati : TextView
+        lateinit var interstitialPubblicita: InterstitialAd
     }
-
     private var totaleNumeroDiPokemonShiny = 0
-    private lateinit var pokemonDataCreator : PokemonDataCreator
-    private lateinit var barraDiPercentualeShinyCatturati : NumberProgressBar
-    private lateinit var labelDiPercentualeShinyCatturati : TextView
     private lateinit var sharedPreferences: SharedPreferences
     private var mostraSoloShinyCatturati = true
     private var mostraSoloShinyMancanti = true
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
         sharedPreferences = getPreferences(Context.MODE_PRIVATE)
-        pokemonDataCreator = PokemonDataCreator(this.assets.list("pokemon")!!,this.application)
-        MobileAds.initialize(this){}
-        caricaBanner()
-        caricaInterstitial()
-    }
-
-    override fun onStart() {
-        super.onStart()
+        setContentView(R.layout.activity_main)
+        CaricaPubblicita()
         inizializzaComponenti()
-        caricaListaPokemonShinyCatturati(pokemonDataCreator)
-        creaAdapter()
     }
 
     private fun inizializzaComponenti(){
@@ -55,7 +41,22 @@ open class MainActivity : AppCompatActivity() {
         aggiornaBarraDiPercentualeShinyCatturati(0)
     }
 
-    @SuppressLint("SetTextI18n")
+    override fun onStart() {
+        super.onStart()
+        CaricaStatoSalvato()
+        val layout = findViewById<LinearLayout>(R.id.layout)
+        ShinyDataCreator(Interfaccia(this,getLarghezzaDisplay(),layout))
+        val totShinyCatturati = POKEMON.values.count{ v -> v == 1 }
+        aggiornaLabelDiPercentualeShinyCatturati(totShinyCatturati)
+        aggiornaBarraDiPercentualeShinyCatturati(totShinyCatturati)
+    }
+
+    private fun CaricaPubblicita(){
+        MobileAds.initialize(this){}
+        caricaBanner()
+        caricaInterstitial()
+    }
+
     private fun aggiornaLabelDiPercentualeShinyCatturati(shinyCatturati : Int){
         labelDiPercentualeShinyCatturati = findViewById(R.id.contatore)
         labelDiPercentualeShinyCatturati.text = "Shiny: $shinyCatturati / $totaleNumeroDiPokemonShiny"
@@ -67,67 +68,11 @@ open class MainActivity : AppCompatActivity() {
         barraDiPercentualeShinyCatturati.progress = shinyCatturati
     }
 
-    private fun creaAdapter(){
-        listView.apply {
-            adapter = AdapterPokemon(
-                context,
-                pokemonDataCreator.getListaTriplettePokemon(),
-                barraDiPercentualeShinyCatturati,
-                labelDiPercentualeShinyCatturati,
-                getLarghezzaDisplay()
-            )
-        }
-    }
 
     private fun getLarghezzaDisplay() : Int{
         val displayMetrics = DisplayMetrics()
         windowManager.defaultDisplay.getMetrics(displayMetrics)
         return displayMetrics.widthPixels
-    }
-
-    private fun caricaListaPokemonShinyCatturati(pokemonDataCreator: PokemonDataCreator){
-        val stringaDiSalvataggio = sharedPreferences.getString("LISTA_CATTURATI", null)
-        listaTriplettePokemonCatturati = pokemonDataCreator.getListaPokemonCatturati()
-        if(stringaDiSalvataggio != null)
-            caricaListaTriplettePokemonCatturati(stringaDiSalvataggio)
-    }
-
-    @SuppressLint("SetTextI18n")
-    private fun caricaListaTriplettePokemonCatturati(stringaDiSalvataggio : String){
-        val triplette = stringaDiSalvataggio.split("|")
-        var numeroShinyCatturati = 0
-        var i = 0
-        for (tripletta in triplette){
-            if(primoUtilizzo(triplette) && isNuovaTripletta(i)){
-                listaTriplettePokemonCatturati[i][0] = 0
-                listaTriplettePokemonCatturati[i][1] = 0
-                listaTriplettePokemonCatturati[i][2] = 0
-                i++
-            }
-            val pokemon = tripletta.split(";")
-            listaTriplettePokemonCatturati[i][0] = pokemon[0].toInt()
-            listaTriplettePokemonCatturati[i][1] = pokemon[1].toInt()
-            listaTriplettePokemonCatturati[i][2] = pokemon[2].toInt()
-            if(pokemon[0].toInt() == 1)
-                numeroShinyCatturati++
-            if(pokemon[1].toInt() == 1)
-                numeroShinyCatturati++
-            if(pokemon[2].toInt() == 1)
-                numeroShinyCatturati++
-            i++
-        }
-        aggiornaLabelDiPercentualeShinyCatturati(numeroShinyCatturati)
-        aggiornaBarraDiPercentualeShinyCatturati(numeroShinyCatturati)
-    }
-
-    private fun isNuovaTripletta(posizioneTripletta : Int) : Boolean {
-        return  listaTriplettePokemonCatturati[posizioneTripletta][0] == -1 &&
-                listaTriplettePokemonCatturati[posizioneTripletta][1] == -1 &&
-                listaTriplettePokemonCatturati[posizioneTripletta][2] == -1
-    }
-
-    private fun primoUtilizzo(triplette : List<String>) : Boolean{
-        return triplette.size != listaTriplettePokemonCatturati.size
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
@@ -176,7 +121,9 @@ open class MainActivity : AppCompatActivity() {
     }
 
     private fun resettaIconeMenu(iconaCatturati : MenuItem, iconaMancanti : MenuItem){
-        creaAdapter()
+        val layout = findViewById<LinearLayout>(R.id.layout)
+        layout.removeAllViews()
+        ShinyDataCreator(Interfaccia(this,getLarghezzaDisplay(),layout))
         iconaCatturati.icon = getDrawable(R.drawable.shiny_catturati)!!
         iconaMancanti.icon = getDrawable(R.drawable.shiny_mancanti)!!
         mostraSoloShinyCatturati = true
@@ -184,28 +131,48 @@ open class MainActivity : AppCompatActivity() {
     }
 
     private fun mostraSoloShinyCatturati(){
-        val shinyListCreator = ShinyDataCreator(listaTriplettePokemonCatturati,pokemonDataCreator)
-        listView.apply {
-            adapter = AdapterShiny(
-                context,
-                shinyListCreator.getListaSoloShinyCatturati(),
-                getLarghezzaDisplay(),
-                mostraSoloShinyCatturati,
-                mostraSoloShinyMancanti
-            )
+        val layout = findViewById<LinearLayout>(R.id.layout)
+        layout.removeAllViews()
+        val interfaccia = Interfaccia(this,getLarghezzaDisplay(),layout)
+        var riga = mutableListOf<String>()
+        val chiavi = POKEMON.keys
+        for(c in chiavi){
+            if(POKEMON[c] == 1){
+                riga.add(c)
+                if(riga.size == 3){
+                    interfaccia.creaRiga(riga[0],riga[1],riga[2])
+                    riga = mutableListOf()
+                }
+            }
+        }
+        if(riga.size != 0){
+            repeat(3 - riga.size){
+                riga.add("VUOTO")
+            }
+            interfaccia.creaRiga(riga[0],riga[1],riga[2])
         }
     }
 
     private fun mostraSoloShinyMancanti(){
-        val shinyListCreator = ShinyDataCreator(listaTriplettePokemonCatturati,pokemonDataCreator)
-        listView.apply {
-            adapter = AdapterShiny(
-                context,
-                shinyListCreator.getListaSoloShinyMancanti(),
-                getLarghezzaDisplay(),
-                mostraSoloShinyCatturati,
-                mostraSoloShinyMancanti
-            )
+        val layout = findViewById<LinearLayout>(R.id.layout)
+        layout.removeAllViews()
+        val interfaccia = Interfaccia(this,getLarghezzaDisplay(),layout)
+        var riga = mutableListOf<String>()
+        val chiavi = POKEMON.keys
+        for(c in chiavi){
+            if(POKEMON[c] == 0){
+                riga.add(c)
+                if(riga.size == 3){
+                    interfaccia.creaRiga(riga[0],riga[1],riga[2])
+                    riga = mutableListOf()
+                }
+            }
+        }
+        if(riga.size != 0){
+            repeat(3 - riga.size){
+                riga.add("VUOTO")
+            }
+            interfaccia.creaRiga(riga[0],riga[1],riga[2])
         }
     }
 
@@ -237,24 +204,41 @@ open class MainActivity : AppCompatActivity() {
 
     override fun onPause() {
         super.onPause()
-        salvaListaTriplettePokemonCatturati()
+        SalvaStatoCorrente()
     }
 
-    private fun salvaListaTriplettePokemonCatturati() {
+    override fun onStop() {
+        super.onStop()
+        SalvaStatoCorrente()
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        SalvaStatoCorrente()
+    }
+
+    private fun SalvaStatoCorrente(){
+        var stringaDiSalvataggio = ""
+        for(pokemon in POKEMON){
+            val chiave = pokemon.key
+            val valore = pokemon.value
+            stringaDiSalvataggio += "$chiave;$valore|"
+        }
+        stringaDiSalvataggio = stringaDiSalvataggio.substringBeforeLast("|")
+        Log.i("STRINGA_DI_SALVATAGGIO", stringaDiSalvataggio)
         sharedPreferences.edit()
-            .putString("LISTA_CATTURATI", listaTripletteToString(listaTriplettePokemonCatturati))
+            .putString("DATABASE", stringaDiSalvataggio)
             .apply()
     }
 
-    private fun listaTripletteToString(listaTriplettePokemonCatturati : MutableList<MutableList<Int>>) : String{
-        var stringaDiSalvataggio = ""
-        for(tripletta in listaTriplettePokemonCatturati){
-            for(pokemon in tripletta)
-                stringaDiSalvataggio += "$pokemon;"
-            stringaDiSalvataggio = stringaDiSalvataggio.substringBeforeLast(";")
-            stringaDiSalvataggio += "|"
+    private fun CaricaStatoSalvato(){
+        val stringaDiSalvataggio = sharedPreferences.getString("DATABASE", null)
+        if(stringaDiSalvataggio != null){
+            val pokemons = stringaDiSalvataggio.split("|")
+            for(pokemon in pokemons){
+                val chiaveValore = pokemon.split(";")
+                POKEMON[chiaveValore[0]] = chiaveValore[1].toInt()
+            }
         }
-        stringaDiSalvataggio = stringaDiSalvataggio.substringBeforeLast("|")
-        return stringaDiSalvataggio
     }
 }

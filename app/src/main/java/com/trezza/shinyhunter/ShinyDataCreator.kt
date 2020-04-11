@@ -1,101 +1,173 @@
 package com.trezza.shinyhunter
 
-import android.graphics.drawable.Drawable
-
-class ShinyDataCreator(private var listaTriplettePokemonCatturati: MutableList<MutableList<Int>> = mutableListOf(),
-                       private var pokemonDataCreator: PokemonDataCreator) {
-
-    private var listaPokemon: MutableList<MutableList<Drawable>> = mutableListOf()
-    private var triplettaPokemon: MutableList<Drawable> = mutableListOf()
-    private var posizione = 0
-
-    fun getListaSoloShinyCatturati() : MutableList<MutableList<Drawable>>{
-        creaListaSoloShinyCatturati()
-        return listaPokemon
-    }
-
-    fun getListaSoloShinyMancanti() : MutableList<MutableList<Drawable>>{
-        creaListaSoloShinyMancanti()
-        return listaPokemon
-    }
-
-    private fun creaListaSoloShinyCatturati(){
-        for((i,tripletta) in listaTriplettePokemonCatturati.withIndex()){
-            if(tripletta[0] == 1 || tripletta[1] == 1 || tripletta[2] == 1){
-                if(isTriplettaFull())
-                    aggiungiTriplettaAListaTriplette()
-                var posizionePokemon = 0
-                repeat(3){
-                    if(!isTriplettaFull()) {
-                        if (isShinyCatturato(tripletta[posizionePokemon]))
-                            aggiungiATripletta(i, posizionePokemon)
-                    }
-                    else{
-                        aggiungiTriplettaAListaTriplette()
-                        if (isShinyCatturato(tripletta[posizionePokemon]))
-                            aggiungiPrimoElementoATripletta(i,posizionePokemon)
-                    }
-                    posizionePokemon++
-                }
-            }
-        }
-        concludiTripletta()
-    }
-
-    private fun creaListaSoloShinyMancanti() {
-        for((i,tripletta) in listaTriplettePokemonCatturati.withIndex()){
-            if(tripletta[0] == 0 || tripletta[1] == 0 || tripletta[2] == 0){
-                if(isTriplettaFull())
-                    aggiungiTriplettaAListaTriplette()
-                var posizionePokemon = 0
-                repeat(3){
-                    if(!isTriplettaFull()) {
-                        if (!isShinyCatturato(tripletta[posizionePokemon]) && !isImmagineVuota(i,posizionePokemon))
-                            aggiungiATripletta(i, posizionePokemon)
-                    }
-                    else{
-                        aggiungiTriplettaAListaTriplette()
-                        if (!isShinyCatturato(tripletta[posizionePokemon])  && !isImmagineVuota(i,posizionePokemon))
-                            aggiungiPrimoElementoATripletta(i,posizionePokemon)
-                    }
-                    posizionePokemon++
-                }
-            }
-        }
-        concludiTripletta()
-    }
-
-    private fun aggiungiPrimoElementoATripletta(posizioneTripletta : Int, posizionePokemon : Int){
-        triplettaPokemon.add(pokemonDataCreator.getPokemonDrawable(posizioneTripletta,posizionePokemon))
-        posizione = 1
-    }
-    private fun aggiungiATripletta(posizioneTripletta : Int, posizionePokemon : Int){
-        triplettaPokemon.add(pokemonDataCreator.getPokemonDrawable(posizioneTripletta,posizionePokemon))
-        posizione++
-    }
-
-    private fun aggiungiTriplettaAListaTriplette(){
-        listaPokemon.add(triplettaPokemon)
-        triplettaPokemon = mutableListOf()
-        posizione = 0
-    }
-
-    private fun concludiTripletta(){
-        repeat(3 - posizione){
-            triplettaPokemon.add(pokemonDataCreator.creaImmagineVuota())
-        }
-        listaPokemon.add(triplettaPokemon)
-    }
-
-    private fun isImmagineVuota(posizioneTripletta : Int, posizionePokemon : Int) : Boolean{
-        return pokemonDataCreator.getPokemonDrawable(posizioneTripletta, posizionePokemon).alpha == 0
-    }
-
-    private fun isTriplettaFull() : Boolean{
-        return posizione == 3
-    }
-
-    private fun isShinyCatturato(segnaposto : Int) : Boolean{
-        return segnaposto == 1
+class ShinyDataCreator(interfaccia: Interfaccia){
+    init{
+        interfaccia.creaRiga("001", "002", "003")
+        interfaccia.creaRiga("004", "005", "006")
+        interfaccia.creaRiga("007", "008", "009")
+        interfaccia.creaRiga("010", "011", "012")
+        interfaccia.creaRiga("016", "017", "018")
+        interfaccia.creaRiga("019", "020", "VUOTO")
+        interfaccia.creaRiga("019_A", "020_A", "VUOTO")
+        interfaccia.creaRiga("023", "024", "VUOTO")
+        interfaccia.creaRiga("172", "025", "026")
+        interfaccia.creaRiga("026_A", "VUOTO", "VUOTO")
+        interfaccia.creaRiga("027", "028", "VUOTO")
+        interfaccia.creaRiga("027_A", "028_A", "VUOTO")
+        interfaccia.creaRiga("029", "030", "031")
+        interfaccia.creaRiga("032", "033", "034")
+        interfaccia.creaRiga("173", "035", "036")
+        interfaccia.creaRiga("037_A", "038_A", "VUOTO")
+        interfaccia.creaRiga("174", "039", "040")
+        interfaccia.creaRiga("041", "042", "169")
+        interfaccia.creaRiga("043", "044", "045")
+        interfaccia.creaRiga("182", "VUOTO", "VUOTO")
+        interfaccia.creaRiga("050", "051", "VUOTO")
+        interfaccia.creaRiga("050_A", "051_A", "VUOTO")
+        interfaccia.creaRiga("052", "053", "VUOTO")
+        interfaccia.creaRiga("052_A", "053_A", "VUOTO")
+        interfaccia.creaRiga("054", "055", "VUOTO")
+        interfaccia.creaRiga("056", "057", "VUOTO")
+        interfaccia.creaRiga("058", "059", "VUOTO")
+        interfaccia.creaRiga("060", "061", "062")
+        interfaccia.creaRiga("186", "VUOTO", "VUOTO")
+        interfaccia.creaRiga("066", "067", "068")
+        interfaccia.creaRiga("060", "061", "062")
+        interfaccia.creaRiga("072", "073", "VUOTO")
+        interfaccia.creaRiga("074", "075", "076")
+        interfaccia.creaRiga("074_A", "075_A", "076_A")
+        interfaccia.creaRiga("077", "078", "VUOTO")
+        interfaccia.creaRiga("081", "082", "462")
+        interfaccia.creaRiga("083", "VUOTO", "VUOTO")
+        interfaccia.creaRiga("086", "087", "VUOTO")
+        interfaccia.creaRiga("088", "089", "VUOTO")
+        interfaccia.creaRiga("088_A", "089_A", "VUOTO")
+        interfaccia.creaRiga("090", "091", "VUOTO")
+        interfaccia.creaRiga("092", "093", "094")
+        interfaccia.creaRiga("095", "208", "VUOTO")
+        interfaccia.creaRiga("096", "097", "VUOTO")
+        interfaccia.creaRiga("098", "099", "VUOTO")
+        interfaccia.creaRiga("102", "103", "103_A")
+        interfaccia.creaRiga("104", "105", "105_A")
+        interfaccia.creaRiga("108", "463", "VUOTO")
+        interfaccia.creaRiga("109", "110", "VUOTO")
+        interfaccia.creaRiga("111", "112", "464")
+        interfaccia.creaRiga("440", "113", "242")
+        interfaccia.creaRiga("116", "117", "230")
+        interfaccia.creaRiga("439", "122", "VUOTO")
+        interfaccia.creaRiga("123", "212", "VUOTO")
+        interfaccia.creaRiga("238", "124", "VUOTO")
+        interfaccia.creaRiga("239", "125", "466")
+        interfaccia.creaRiga("240", "126", "467")
+        interfaccia.creaRiga("127", "128", "115")
+        interfaccia.creaRiga("129", "130", "VUOTO")
+        interfaccia.creaRiga("131", "VUOTO", "VUOTO")
+        interfaccia.creaRiga("133", "134", "135")
+        interfaccia.creaRiga("136", "196", "197")
+        interfaccia.creaRiga("470", "471", "VUOTO")
+        interfaccia.creaRiga("138", "139", "VUOTO")
+        interfaccia.creaRiga("140", "141", "VUOTO")
+        interfaccia.creaRiga("142", "VUOTO", "VUOTO")
+        interfaccia.creaRiga("144", "145", "146")
+        interfaccia.creaRiga("147", "148", "149")
+        interfaccia.creaRiga("150", "VUOTO", "VUOTO")
+        interfaccia.creaRiga("152", "153", "154")
+        interfaccia.creaRiga("155", "156", "157")
+        interfaccia.creaRiga("158", "159", "160")
+        interfaccia.creaRiga("161", "162", "VUOTO")
+        interfaccia.creaRiga("175", "176", "468")
+        interfaccia.creaRiga("177", "178", "VUOTO")
+        interfaccia.creaRiga("179", "180", "181")
+        interfaccia.creaRiga("298", "183", "184")
+        interfaccia.creaRiga("438", "185", "VUOTO")
+        interfaccia.creaRiga("190", "424", "VUOTO")
+        interfaccia.creaRiga("191", "192", "VUOTO")
+        interfaccia.creaRiga("193", "469", "VUOTO")
+        interfaccia.creaRiga("198", "430", "VUOTO")
+        interfaccia.creaRiga("200", "429", "VUOTO")
+        interfaccia.creaRiga("360", "202", "VUOTO")
+        interfaccia.creaRiga("204", "205", "VUOTO")
+        interfaccia.creaRiga("207", "472", "VUOTO")
+        interfaccia.creaRiga("209", "210", "VUOTO")
+        interfaccia.creaRiga("213", "VUOTO", "VUOTO")
+        interfaccia.creaRiga("215", "461", "VUOTO")
+        interfaccia.creaRiga("216", "217", "VUOTO")
+        interfaccia.creaRiga("220", "221", "473")
+        interfaccia.creaRiga("225", "VUOTO", "VUOTO")
+        interfaccia.creaRiga("227", "VUOTO", "VUOTO")
+        interfaccia.creaRiga("228", "229", "VUOTO")
+        interfaccia.creaRiga("234", "VUOTO", "VUOTO")
+        interfaccia.creaRiga("243", "244", "245")
+        interfaccia.creaRiga("246", "247", "248")
+        interfaccia.creaRiga("249", "250", "VUOTO")
+        interfaccia.creaRiga("252", "253", "254")
+        interfaccia.creaRiga("255", "256", "257")
+        interfaccia.creaRiga("258", "259", "260")
+        interfaccia.creaRiga("261", "262", "VUOTO")
+        interfaccia.creaRiga("263", "264", "VUOTO")
+        interfaccia.creaRiga("265", "266", "267")
+        interfaccia.creaRiga("268", "269", "VUOTO")
+        interfaccia.creaRiga("270", "271", "272")
+        interfaccia.creaRiga("276", "277", "VUOTO")
+        interfaccia.creaRiga("278", "279", "VUOTO")
+        interfaccia.creaRiga("280", "281", "282")
+        interfaccia.creaRiga("475", "VUOTO", "VUOTO")
+        interfaccia.creaRiga("287", "288", "289")
+        interfaccia.creaRiga("290", "291", "VUOTO")
+        interfaccia.creaRiga("296", "297", "VUOTO")
+        interfaccia.creaRiga("302", "303", "VUOTO")
+        interfaccia.creaRiga("304", "305", "306")
+        interfaccia.creaRiga("307", "308", "VUOTO")
+        interfaccia.creaRiga("309", "310", "VUOTO")
+        interfaccia.creaRiga("311", "312", "VUOTO")
+        interfaccia.creaRiga("406", "315", "407")
+        interfaccia.creaRiga("318", "319", "VUOTO")
+        interfaccia.creaRiga("320", "321", "VUOTO")
+        interfaccia.creaRiga("325", "326", "VUOTO")
+        interfaccia.creaRiga("327", "VUOTO", "VUOTO")
+        interfaccia.creaRiga("328", "329", "330")
+        interfaccia.creaRiga("333", "334", "VUOTO")
+        interfaccia.creaRiga("335", "336", "VUOTO")
+        interfaccia.creaRiga("337", "338", "VUOTO")
+        interfaccia.creaRiga("339", "340", "VUOTO")
+        interfaccia.creaRiga("343", "344", "VUOTO")
+        interfaccia.creaRiga("345", "346", "VUOTO")
+        interfaccia.creaRiga("347", "348", "VUOTO")
+        interfaccia.creaRiga("349", "350", "351")
+        interfaccia.creaRiga("353", "354", "VUOTO")
+        interfaccia.creaRiga("355", "356", "477")
+        interfaccia.creaRiga("359", "VUOTO", "VUOTO")
+        interfaccia.creaRiga("361", "362", "478")
+        interfaccia.creaRiga("366", "367", "368")
+        interfaccia.creaRiga("370", "VUOTO", "VUOTO")
+        interfaccia.creaRiga("371", "372", "373")
+        interfaccia.creaRiga("374", "375", "376")
+        interfaccia.creaRiga("377", "378", "379")
+        interfaccia.creaRiga("380", "381", "VUOTO")
+        interfaccia.creaRiga("382", "383", "384")
+        interfaccia.creaRiga("387", "388", "389")
+        interfaccia.creaRiga("390", "391", "392")
+        interfaccia.creaRiga("393", "394", "395")
+        interfaccia.creaRiga("403", "404", "405")
+        interfaccia.creaRiga("412", "413", "414")
+        interfaccia.creaRiga("425", "426", "VUOTO")
+        interfaccia.creaRiga("427", "428", "VUOTO")
+        interfaccia.creaRiga("436", "437", "VUOTO")
+        interfaccia.creaRiga("443", "444", "445")
+        interfaccia.creaRiga("447", "448", "VUOTO")
+        interfaccia.creaRiga("449", "450", "VUOTO")
+        interfaccia.creaRiga("451", "452", "VUOTO")
+        interfaccia.creaRiga("453", "454", "VUOTO")
+        interfaccia.creaRiga("459", "460", "VUOTO")
+        interfaccia.creaRiga("485", "487", "488")
+        interfaccia.creaRiga("491", "VUOTO", "VUOTO")
+        interfaccia.creaRiga("504", "505", "VUOTO")
+        interfaccia.creaRiga("506", "507", "508")
+        interfaccia.creaRiga("532", "533", "534")
+        interfaccia.creaRiga("562", "563", "VUOTO")
+        interfaccia.creaRiga("572", "573", "VUOTO")
+        interfaccia.creaRiga("599", "600", "601")
+        interfaccia.creaRiga("638", "VUOTO", "VUOTO")
+        interfaccia.creaRiga("808", "809", "VUOTO")
     }
 }
