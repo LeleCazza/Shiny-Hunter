@@ -10,6 +10,7 @@ import android.view.Menu
 import android.view.MenuItem
 import android.widget.RelativeLayout
 import android.widget.TextView
+import androidx.fragment.app.FragmentManager
 import kotlinx.android.synthetic.main.activity_main.*
 import com.daimajia.numberprogressbar.NumberProgressBar
 import com.google.android.gms.ads.*
@@ -133,6 +134,7 @@ open class MainActivity : AppCompatActivity() {
         menuInflater.inflate(R.menu.menu, menu)
         val shinyMancanti = menu?.findItem(R.id.ShinyMancanti)
         val shinyCatturati = menu?.findItem(R.id.ShinyCatturati)
+        val istruzioni = menu?.findItem(R.id.Istruzioni)
         shinyMancanti?.setOnMenuItemClickListener {
             if(mostraSoloShinyMancanti)
                 impostaIconaShinyCatturati(shinyCatturati!!,shinyMancanti)
@@ -145,6 +147,11 @@ open class MainActivity : AppCompatActivity() {
                 impostaIconaShinyMancanti(shinyCatturati,shinyMancanti!!)
             else
                 resettaIconeMenu(shinyCatturati,shinyMancanti!!)
+            true
+        }
+        istruzioni?.setOnMenuItemClickListener {
+            val istr = DialogIstruzioni()
+            istr.show(supportFragmentManager,"ISTRUZIONI")
             true
         }
         return true

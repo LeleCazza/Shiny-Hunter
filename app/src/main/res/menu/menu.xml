@@ -12,4 +12,10 @@
             android:title=""
             app:showAsAction="always">
     </item>
+    <item
+            android:id="@+id/Istruzioni"
+            android:icon="@drawable/istruzioni"
+            android:title=""
+            app:showAsAction="always">
+    </item>
 </menu>

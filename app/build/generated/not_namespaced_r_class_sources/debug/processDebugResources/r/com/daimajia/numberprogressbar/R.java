@@ -27,8 +27,8 @@ public final class R {
     public static final class id {
         private id() {}
 
-        public static final int invisible = 0x7f080087;
-        public static final int visible = 0x7f080100;
+        public static final int invisible = 0x7f080088;
+        public static final int visible = 0x7f080101;
     }
     public static final class style {
         private style() {}

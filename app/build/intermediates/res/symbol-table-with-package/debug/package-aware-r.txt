@@ -1104,6 +1104,7 @@ drawable ic_launcher_foreground
 drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
+drawable istruzioni
 drawable mtrl_snackbar_background
 drawable mtrl_tabs_default_indicator
 drawable navigation_empty_icon
@@ -1129,6 +1130,7 @@ drawable vuoto
 id ALT
 id CTRL
 id FUNCTION
+id Istruzioni
 id LayoutBanner
 id META
 id SHIFT
